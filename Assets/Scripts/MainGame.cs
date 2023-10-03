@@ -6,7 +6,13 @@ using UnityEngine.UI;
 
 public class MainGame : MonoBehaviour
 {
-   
+
+    
+    public Button button;//ce que j'ai rajouté
+
+
+
+
     public TMP_Text textCharacterName;
     public TMP_Text textDialog;
     public Image spriteCharacter;
@@ -23,6 +29,19 @@ public class MainGame : MonoBehaviour
     public void OnClickNextDialog()
     {
         _sequenceNumber++;
+
+
+        //ce que j'ai rajouté
+        if (_sequenceNumber >= dialogs.Length)
+        {
+            button.gameObject.SetActive(false);
+        }
+
+
+
+
+
+        UpdateDialogSequence(dialogs[_sequenceNumber]);
     }
 
     // Start is called before the first frame update
@@ -34,6 +53,12 @@ public class MainGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        UpdateDialogSequence(dialogs[_sequenceNumber]);
+        
+        
+
+
+
+        
+       
     }
 }
