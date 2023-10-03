@@ -16,6 +16,7 @@ public class MainGame : MonoBehaviour
     public TMP_Text textCharacterName;
     public TMP_Text textDialog;
     public Image spriteCharacter;
+    public Image spriteBackground; //bg
     public DialogSequence[] dialogs;
     private int _sequenceNumber = 0;
 
@@ -24,12 +25,12 @@ public class MainGame : MonoBehaviour
         textDialog.text = s.textDialog;
         textCharacterName.text = s.textCharacterName;
         spriteCharacter.sprite = s.spriteCharacter;
+        spriteBackground.sprite = s.spriteBackground; //bg
     }
 
     public void OnClickNextDialog()
     {
         _sequenceNumber++;
-
 
         //ce que j'ai rajouté
         if (_sequenceNumber >= dialogs.Length)
@@ -44,23 +45,24 @@ public class MainGame : MonoBehaviour
         {
             UpdateDialogSequence(dialogs[_sequenceNumber]);
         }
+
     }
 
-    // Start is called before the first frame update
+  
     void Start()
     {
         UpdateDialogSequence(dialogs[0]);
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
-        
-        
+        if (Input.GetKey(KeyCode.Space))
+        {
+            OnClickNextDialog();
+        }
 
-
-
-        
-       
     }
+
+
 }
