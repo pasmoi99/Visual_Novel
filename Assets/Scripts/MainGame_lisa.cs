@@ -4,18 +4,15 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class MainGame : MonoBehaviour
+public class MainGame_lisa : MonoBehaviour
 {
 
     
-    public Button button;//ce que j'ai rajouté
-
-
-
-
+    public Button button;
     public TMP_Text textCharacterName;
     public TMP_Text textDialog;
     public Image spriteCharacter;
+    public Image spriteBackground;
     public DialogSequence[] dialogs;
     private int _sequenceNumber = 0;
 
@@ -24,6 +21,7 @@ public class MainGame : MonoBehaviour
         textDialog.text = s.textDialog;
         textCharacterName.text = s.textCharacterName;
         spriteCharacter.sprite = s.spriteCharacter;
+        spriteBackground.sprite = s.spriteBackground;
     }
 
     public void OnClickNextDialog()

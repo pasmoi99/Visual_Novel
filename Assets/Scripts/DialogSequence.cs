@@ -8,6 +8,7 @@ public class DialogSequence : MonoBehaviour
     public string textCharacterName;
     public string textDialog;
     public Sprite spriteCharacter;
+    public Sprite spriteBackground;
 
     // Start is called before the first frame update
     void Start()
