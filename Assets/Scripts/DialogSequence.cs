@@ -9,13 +9,15 @@ public class DialogSequence : MonoBehaviour
     public string textDialog;
     public Sprite spriteCharacter;
 
-    // Start is called before the first frame update
+    public Sprite spriteBackground; //bg
+
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         
