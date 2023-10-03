@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System.IO;
 
 public class MainGame : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class MainGame : MonoBehaviour
 
 
 
-
+    private string file,path,text;//Donnees pour lire un fichier json
     public TMP_Text textCharacterName;
     public TMP_Text textDialog;
     public Image spriteCharacter;
@@ -35,19 +36,27 @@ public class MainGame : MonoBehaviour
         if (_sequenceNumber >= dialogs.Length)
         {
             button.gameObject.SetActive(false);
+
         }
 
 
 
 
-
-        UpdateDialogSequence(dialogs[_sequenceNumber]);
+        if (_sequenceNumber < dialogs.Length)
+        {
+            UpdateDialogSequence(dialogs[_sequenceNumber]);
+        }
+        
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        path = Application.streamingAssetsPath + "/TextTest.json";
+        file = File.ReadAllText(path);
         UpdateDialogSequence(dialogs[0]);
+
+        //text
     }
 
     // Update is called once per frame
@@ -61,4 +70,7 @@ public class MainGame : MonoBehaviour
         
        
     }
+
+
 }
+
