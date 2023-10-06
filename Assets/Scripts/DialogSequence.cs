@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class DialogSequence : MonoBehaviour
 {
-    
+
+    public int id;
     public string textCharacterName;
     public string textDialog;
     public Sprite spriteCharacter;

@@ -3,18 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using Unity.VisualScripting;
+
+
+using System.IO;
+
 
 public class MainGame : MonoBehaviour
 {
     public static MainGame instance;
 
-    public Button button;//ce que j'ai rajouté
+
+    
+    public Button button;
+
+
+
+    private string jFile; //variable pour lire le fichier json
+    private string jPath; //variable du chemin vers le fichier json
+
     public TMP_Text textCharacterName;
     public TMP_Text textDialog;
     public Image spriteCharacter;
     public Image spriteBackground; //bg
-    public DialogSequence[] dialogs;
+    public List<DialogSequence> dialogsList=new List<DialogSequence>();
     private int _sequenceNumber = 0;
 
     private TextAppear textAppear;
@@ -42,24 +53,43 @@ public class MainGame : MonoBehaviour
     {
         _sequenceNumber++;
 
-        //ce que j'ai rajouté
-        if (_sequenceNumber >= dialogs.Length)
+        if (_sequenceNumber >= dialogsList.Count)
         {
             button.gameObject.SetActive(false);
+
         }
 
 
-        if (_sequenceNumber < dialogs.Length)
+
+
+
+        if (_sequenceNumber < dialogsList.Count)
         {
-            UpdateDialogSequence(dialogs[_sequenceNumber]);
+            UpdateDialogSequence(dialogsList[_sequenceNumber]);
         }
 
+    }
+    // met les dialogues dans la liste DialogSequence
+    public void setDialogs(Dialogs d)
+    {
+        for (int i=0; i<d.dialogs.Length; i++)
+        {
+            dialogsList.Add(new DialogSequence() { id = d.dialogs[i].id, textCharacterName = d.dialogs[i].name, textDialog= d.dialogs[i].dialog });
+        }
     }
 
   
     void Start()
     {
-        UpdateDialogSequence(dialogs[0]);
+        jPath = Application.streamingAssetsPath + "/TextTest.json"; //chemin fichier JSON
+        jFile = File.ReadAllText(jPath); //lecture fichier JSON
+        Dialogs jDialogs = JsonUtility.FromJson<Dialogs>(jFile);
+
+        setDialogs(jDialogs);
+
+        UpdateDialogSequence(dialogsList[0]);
+
+        //text
     }
 
    
@@ -77,3 +107,16 @@ public class MainGame : MonoBehaviour
     
 
 }
+[System.Serializable]
+public class Dialog
+{
+    public int id;
+    public string name;
+    public string dialog;
+}
+[System.Serializable]
+public class Dialogs
+{
+    public Dialog[] dialogs;
+}
+

@@ -1,0 +1,23 @@
+{
+  "dialogs":
+  [
+    {
+      "id" : 1,
+      "name" : "A",
+      "dialog" : "azerty"
+    },
+    {
+      "id" : 2,
+      "name" : "A",
+      "dialog" : "qwerty"
+    },
+    {
+      "id" : 3,
+      "name" : "Yumi",
+      "dialog" : "What the hell?"
+    }
+  ]
+
+  
+
+}
