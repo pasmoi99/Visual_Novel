@@ -14,7 +14,7 @@ public class DialogSequence : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     

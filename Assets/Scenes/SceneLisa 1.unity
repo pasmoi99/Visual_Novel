@@ -322,6 +322,7 @@ MonoBehaviour:
   textCharacterName: A
   textDialog: AAAAAAAAAAAAAAAAAAAAAAAA
   spriteCharacter: {fileID: 21300000, guid: 0e0f2eebd8f6cd54a82c9f461451d62a, type: 3}
+  spriteBackground: {fileID: 21300000, guid: 3787745a4964b1b478db8154f66b0c6c, type: 3}
 --- !u!1 &310078892
 GameObject:
   m_ObjectHideFlags: 0
@@ -1118,6 +1119,7 @@ MonoBehaviour:
   textCharacterName: 
   textDialog: 
   spriteCharacter: {fileID: 0}
+  spriteBackground: {fileID: 0}
 --- !u!1 &1199133325
 GameObject:
   m_ObjectHideFlags: 0
@@ -1333,6 +1335,7 @@ MonoBehaviour:
   textCharacterName: Yumi
   textDialog: Yo, WTF?
   spriteCharacter: {fileID: 21300000, guid: 0b2582c08e56def4ba781a1715c10408, type: 3}
+  spriteBackground: {fileID: 21300000, guid: 3787745a4964b1b478db8154f66b0c6c, type: 3}
 --- !u!1 &1539090628
 GameObject:
   m_ObjectHideFlags: 0
@@ -1380,6 +1383,7 @@ MonoBehaviour:
   textCharacterName: A
   textDialog: BBBBBBBBBBB
   spriteCharacter: {fileID: 21300000, guid: 0e0f2eebd8f6cd54a82c9f461451d62a, type: 3}
+  spriteBackground: {fileID: 21300000, guid: 3787745a4964b1b478db8154f66b0c6c, type: 3}
 --- !u!1 &1694597379
 GameObject:
   m_ObjectHideFlags: 0
@@ -1465,6 +1469,7 @@ MonoBehaviour:
   textDialog: "qqqqqqfsgjhgilhgbzqgbzqgbzqgbzqgbzqgbzqgbzqgbzqgbzqgbzqgbzqgbzqgbzqrrrrrrrrrrrrrrrrrrrrjbklnv
     cxl\xF9irueyqriulvknlmdfsjgh"
   spriteCharacter: {fileID: 21300000, guid: 0e0f2eebd8f6cd54a82c9f461451d62a, type: 3}
+  spriteBackground: {fileID: 0}
 --- !u!1 &1868577837
 GameObject:
   m_ObjectHideFlags: 0
@@ -1601,9 +1606,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 856349cf7fde7bf4f9ed540f798558cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  button: {fileID: 693683539}
   textCharacterName: {fileID: 1356333725}
   textDialog: {fileID: 310078894}
   spriteCharacter: {fileID: 699489058}
+  spriteBackground: {fileID: 487680152}
   dialogs:
   - {fileID: 305711590}
   - {fileID: 1539090630}
@@ -1673,3 +1680,4 @@ MonoBehaviour:
   textCharacterName: 
   textDialog: 
   spriteCharacter: {fileID: 0}
+  spriteBackground: {fileID: 0}

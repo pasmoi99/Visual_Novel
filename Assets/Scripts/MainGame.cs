@@ -3,22 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
 public class MainGame : MonoBehaviour
 {
+    public static MainGame instance;
 
-    
     public Button button;//ce que j'ai rajouté
-
-
-
-
     public TMP_Text textCharacterName;
     public TMP_Text textDialog;
     public Image spriteCharacter;
     public Image spriteBackground; //bg
     public DialogSequence[] dialogs;
     private int _sequenceNumber = 0;
+
+    private TextAppear textAppear;
+
+    private void Awake()
+    {
+        if (instance != null)
+            Destroy(this);
+        else
+            instance = this;
+
+        textAppear = GetComponent<TextAppear>();
+        textAppear.Init(this);
+    }
 
     void UpdateDialogSequence(DialogSequence s)
     {
@@ -37,8 +47,6 @@ public class MainGame : MonoBehaviour
         {
             button.gameObject.SetActive(false);
         }
-
-
 
 
         if (_sequenceNumber < dialogs.Length)
@@ -62,7 +70,10 @@ public class MainGame : MonoBehaviour
             OnClickNextDialog();
         }
 
-    }
+       
 
+
+    }
+    
 
 }
