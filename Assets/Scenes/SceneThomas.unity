@@ -319,6 +319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1a0dfa88f92aff4d8cd77f4ccf859eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
   textCharacterName: A
   textDialog: AAAAAAAAAAAAAAAAAAAAAAAA
   spriteCharacter: {fileID: 21300000, guid: 0e0f2eebd8f6cd54a82c9f461451d62a, type: 3}
@@ -1116,6 +1117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1a0dfa88f92aff4d8cd77f4ccf859eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
   textCharacterName: 
   textDialog: 
   spriteCharacter: {fileID: 0}
@@ -1332,6 +1334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1a0dfa88f92aff4d8cd77f4ccf859eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
   textCharacterName: Yumi
   textDialog: Yo, WTF?
   spriteCharacter: {fileID: 21300000, guid: 0b2582c08e56def4ba781a1715c10408, type: 3}
@@ -1380,6 +1383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1a0dfa88f92aff4d8cd77f4ccf859eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
   textCharacterName: A
   textDialog: BBBBBBBBBBB
   spriteCharacter: {fileID: 21300000, guid: 0e0f2eebd8f6cd54a82c9f461451d62a, type: 3}
@@ -1465,6 +1469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1a0dfa88f92aff4d8cd77f4ccf859eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
   textCharacterName: A
   textDialog: "qqqqqqfsgjhgilhgbzqgbzqgbzqgbzqgbzqgbzqgbzqgbzqgbzqgbzqgbzqgbzqgbzqrrrrrrrrrrrrrrrrrrrrjbklnv
     cxl\xF9irueyqriulvknlmdfsjgh"
@@ -1610,12 +1615,8 @@ MonoBehaviour:
   textCharacterName: {fileID: 1356333725}
   textDialog: {fileID: 310078894}
   spriteCharacter: {fileID: 699489058}
-  spriteBackground: {fileID: 0}
-  dialogs:
-  - {fileID: 305711590}
-  - {fileID: 1539090630}
-  - {fileID: 1448267311}
-  - {fileID: 1790167656}
+  spriteBackground: {fileID: 487680152}
+  dialogsList: []
 --- !u!4 &1889133870
 Transform:
   m_ObjectHideFlags: 0
@@ -1675,6 +1676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1a0dfa88f92aff4d8cd77f4ccf859eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
   textCharacterName: 
   textDialog: 
   spriteCharacter: {fileID: 0}

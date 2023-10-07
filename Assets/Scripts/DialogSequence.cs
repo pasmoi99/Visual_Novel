@@ -8,10 +8,11 @@ public class DialogSequence : MonoBehaviour
     public int id;
     public string textCharacterName;
     public string textDialog;
+    public string characterPath;
+    public string backgroundPath;
     public Sprite spriteCharacter;
-
     public Sprite spriteBackground; //bg
-
+    
 
     void Start()
     {

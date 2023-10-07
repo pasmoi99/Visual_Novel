@@ -4,12 +4,16 @@
     {
       "id" : 1,
       "name" : "A",
-      "dialog" : "azerty"
+      "dialog" : "azerty",
+      "characterPath" : "MaleSpritebySutemo",
+      "backgroundPath" : "Apartment_Exterior"
     },
     {
       "id" : 2,
       "name" : "A",
-      "dialog" : "qwerty"
+      "dialog" : "qwerty",
+      "characterPath" : "FemaleSpritebySutemo",
+      "backgroundPath" : "Futon_Room"
     },
     {
       "id" : 3,
