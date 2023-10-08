@@ -13,13 +13,18 @@ public class MainGame : MonoBehaviour
     // public static MainGame instance;
 
 
-    public Button button;
+    public Button buttonNext;
 
-
-
+    public TMP_Text goToSavePoint;
+    public Image goToSavePointBox;
+    public Button buttonGoToBeginning;
+    public Button buttonGoToSavePoint;
+    
     private string jFile; //variable pour lire le fichier json
     private string jPath; //variable du chemin vers le fichier json
 
+    private string jSavePath; //variable du chemin vers le fichier de sauvegarde json
+    private string jSaveFile; //variable pour lire le fichier de sauvegarde json
 
     public TMP_Text textCharacterName;
     public TMP_Text textDialog;
@@ -27,9 +32,77 @@ public class MainGame : MonoBehaviour
     public Image spriteBackground; //bg
     public List<DialogSequence> dialogsList = new List<DialogSequence>();
     private int _sequenceNumber = 0;
+    private SavePoint savePoint;
+
+    //cache les bouttons de choix du moment on l'on reprends
+    private void Awake()
+    {
+        goToSavePointBox.gameObject.SetActive(false);
+        goToSavePoint.gameObject.SetActive(false);
+        buttonGoToBeginning.gameObject.SetActive(false);
+        buttonGoToSavePoint.gameObject.SetActive(false);
+
+        jSavePath = Application.streamingAssetsPath + "/SavePoint.json"; //chemin fichier JSON des sauvegardes
+
+        jSaveFile = File.ReadAllText(jSavePath); //lecture du fichier JSON des sauvegardes et stockage dans jSaveFile
+
+        savePoint = JsonUtility.FromJson<SavePoint>(jSaveFile);
 
 
+        //si dialogId dans le Json de sauvegarde n'a pas été modifié, alors on commence normalement
+        if (savePoint.dialogId == 0)
+        {
+            UpdateDialogSequence(dialogsList[0]);
+            //charger images 
+            LoadImages(dialogsList[_sequenceNumber].characterPath, dialogsList[_sequenceNumber].backgroundPath);
+        }
 
+        //sinon, on demande à l'utilisateur a partir de quel point il veut recomencer
+        else
+        {
+            goToSavePointBox.gameObject.SetActive(true);
+            goToSavePoint.gameObject.SetActive(true);
+            buttonGoToBeginning.gameObject.SetActive(true);
+            buttonGoToSavePoint.gameObject.SetActive(true);
+            buttonGoToBeginning.onClick.AddListener(OnClickGoToBeginning);
+            buttonGoToSavePoint.onClick.AddListener(OnClickGoToSavePoint);
+        }
+    }
+
+
+    void Start()
+    {   
+
+
+        jPath = Application.streamingAssetsPath + "/TextTest.json"; //chemin fichier JSON des dialogues
+
+        jFile = File.ReadAllText(jPath); //lecture du fichier JSON des dialogues et stockage dans jFile
+
+        Dialogs jDialogs = JsonUtility.FromJson<Dialogs>(jFile); //conversion de jFile en List
+
+        setDialogs(jDialogs);
+
+    }
+
+    void OnClickGoToSavePoint()
+    {
+        UpdateDialogSequence(dialogsList[savePoint.dialogId]);
+        goToSavePointBox.gameObject.SetActive(false);
+        goToSavePoint.gameObject.SetActive(false);
+        buttonGoToBeginning.gameObject.SetActive(false);
+        buttonGoToSavePoint.gameObject.SetActive(false);
+    }
+
+    void OnClickGoToBeginning()
+    {
+        UpdateDialogSequence(dialogsList[0]);
+        goToSavePointBox.gameObject.SetActive(false);
+        goToSavePoint.gameObject.SetActive(false);
+        buttonGoToBeginning.gameObject.SetActive(false);
+        buttonGoToSavePoint.gameObject.SetActive(false);
+    }
+
+    // remplace les dialogues actuel par les suivants
     void UpdateDialogSequence(DialogSequence s)
     {
         textDialog.text = s.textDialog;
@@ -64,7 +137,7 @@ public class MainGame : MonoBehaviour
 
         if (_sequenceNumber >= dialogsList.Count)
         {
-            button.gameObject.SetActive(false);
+            buttonNext.gameObject.SetActive(false);
 
         }
 
@@ -75,7 +148,7 @@ public class MainGame : MonoBehaviour
         }
 
     }
-    // met les dialogues dans la liste DialogSequence
+    // met les dialogues dans la liste de type DialogSequence
     public void setDialogs(Dialogs d)
     {
         for (int i = 0; i < d.dialogs.Length; i++)
@@ -85,21 +158,7 @@ public class MainGame : MonoBehaviour
     }
 
 
-        void Start()
-        {
-            jPath = Application.streamingAssetsPath + "/TextTest.json"; //chemin fichier JSON
-            jFile = File.ReadAllText(jPath); //lecture fichier JSON
-            Dialogs jDialogs = JsonUtility.FromJson<Dialogs>(jFile);
-
-            setDialogs(jDialogs);
-
-            UpdateDialogSequence(dialogsList[0]);
-
-            //charger images 
-            LoadImages(dialogsList[_sequenceNumber].characterPath, dialogsList[_sequenceNumber].backgroundPath);
-
-
-    }
+       
 
 
       void LoadImages(string characterPath, string backgroundPath)
@@ -139,24 +198,30 @@ public class MainGame : MonoBehaviour
 
         }
 
-
-  
-    [System.Serializable]
-    public class Dialog
-    {
-        public int id;
-        public string name;
-        public string dialog;
-        public string characterPath;
-        public string backgroundPath;
-
-    }
+}
 
 
-    [System.Serializable]
-    public class Dialogs
-    {
-        public Dialog[] dialogs;
-    }
+[System.Serializable]
+public class Dialog
+{
+    public int id;
+    public string name;
+    public string dialog;
+    public string characterPath;
+    public string backgroundPath;
 
+}
+
+
+[System.Serializable]
+public class Dialogs
+{
+    public Dialog[] dialogs;
+}
+
+
+[System.Serializable]
+public class SavePoint
+{
+    public int dialogId;
 }
