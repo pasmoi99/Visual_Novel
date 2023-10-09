@@ -322,6 +322,8 @@ MonoBehaviour:
   id: 0
   textCharacterName: A
   textDialog: AAAAAAAAAAAAAAAAAAAAAAAA
+  characterPath: 
+  backgroundPath: 
   spriteCharacter: {fileID: 21300000, guid: 0e0f2eebd8f6cd54a82c9f461451d62a, type: 3}
   spriteBackground: {fileID: 0}
 --- !u!1 &310078892
@@ -1120,6 +1122,8 @@ MonoBehaviour:
   id: 0
   textCharacterName: 
   textDialog: 
+  characterPath: 
+  backgroundPath: 
   spriteCharacter: {fileID: 0}
   spriteBackground: {fileID: 0}
 --- !u!1 &1199133325
@@ -1337,6 +1341,8 @@ MonoBehaviour:
   id: 0
   textCharacterName: Yumi
   textDialog: Yo, WTF?
+  characterPath: 
+  backgroundPath: 
   spriteCharacter: {fileID: 21300000, guid: 0b2582c08e56def4ba781a1715c10408, type: 3}
   spriteBackground: {fileID: 0}
 --- !u!1 &1539090628
@@ -1386,6 +1392,8 @@ MonoBehaviour:
   id: 0
   textCharacterName: A
   textDialog: BBBBBBBBBBB
+  characterPath: 
+  backgroundPath: 
   spriteCharacter: {fileID: 21300000, guid: 0e0f2eebd8f6cd54a82c9f461451d62a, type: 3}
   spriteBackground: {fileID: 0}
 --- !u!1 &1694597379
@@ -1473,6 +1481,8 @@ MonoBehaviour:
   textCharacterName: A
   textDialog: "qqqqqqfsgjhgilhgbzqgbzqgbzqgbzqgbzqgbzqgbzqgbzqgbzqgbzqgbzqgbzqgbzqrrrrrrrrrrrrrrrrrrrrjbklnv
     cxl\xF9irueyqriulvknlmdfsjgh"
+  characterPath: 
+  backgroundPath: 
   spriteCharacter: {fileID: 21300000, guid: 0e0f2eebd8f6cd54a82c9f461451d62a, type: 3}
   spriteBackground: {fileID: 0}
 --- !u!1 &1868577837
@@ -1611,7 +1621,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 856349cf7fde7bf4f9ed540f798558cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 693683539}
+  buttonNext: {fileID: 693683539}
+  goToSavePoint: {fileID: 0}
+  goToSavePointBox: {fileID: 0}
+  buttonGoToBeginning: {fileID: 0}
+  buttonGoToSavePoint: {fileID: 0}
   textCharacterName: {fileID: 1356333725}
   textDialog: {fileID: 310078894}
   spriteCharacter: {fileID: 699489058}
@@ -1679,5 +1693,7 @@ MonoBehaviour:
   id: 0
   textCharacterName: 
   textDialog: 
+  characterPath: 
+  backgroundPath: 
   spriteCharacter: {fileID: 0}
   spriteBackground: {fileID: 0}
