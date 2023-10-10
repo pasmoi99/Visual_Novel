@@ -22,6 +22,8 @@ public class MainGame : MonoBehaviour
     
     private string jFile; //variable pour lire le fichier json
     private string jPath; //variable du chemin vers le fichier json
+    private Dialogs jDialogs;
+
 
     private string jSavePath; //variable du chemin vers le fichier de sauvegarde json
     private string jSaveFile; //variable pour lire le fichier de sauvegarde json
@@ -78,7 +80,7 @@ public class MainGame : MonoBehaviour
 
         jFile = File.ReadAllText(jPath); //lecture du fichier JSON des dialogues et stockage dans jFile
 
-        Dialogs jDialogs = JsonUtility.FromJson<Dialogs>(jFile); //conversion de jFile en List
+        jDialogs = JsonUtility.FromJson<Dialogs>(jFile); //conversion de jFile en List
 
         setDialogs(jDialogs);
 
@@ -94,7 +96,8 @@ public class MainGame : MonoBehaviour
 
     void OnClickGoToSavePoint()
     {
-        UpdateDialogSequence(dialogsList[savePoint.dialogId]);
+        _sequenceNumber = savePoint.dialogId;
+        UpdateDialogSequence(dialogsList[_sequenceNumber]);
         goToSavePointBox.gameObject.SetActive(false);
         goToSavePoint.gameObject.SetActive(false);
         buttonGoToBeginning.gameObject.SetActive(false);
@@ -103,6 +106,7 @@ public class MainGame : MonoBehaviour
 
     void OnClickGoToBeginning()
     {
+        _sequenceNumber = 0;
         UpdateDialogSequence(dialogsList[0]);
         goToSavePointBox.gameObject.SetActive(false);
         goToSavePoint.gameObject.SetActive(false);
@@ -154,6 +158,7 @@ public class MainGame : MonoBehaviour
         {
             UpdateDialogSequence(dialogsList[_sequenceNumber]);
         }
+        CheckAndSetSavePoint(jDialogs.dialogs[_sequenceNumber]);
 
     }
 
