@@ -13,6 +13,8 @@ public class MainMenu : MonoBehaviour
     public List<Button> buttonsList;
     public Image imageButton;
     public List<TMPro.TextMeshProUGUI> textList;
+    public AudioSource music;
+
 
     // transition entre les scenes
     public void OnCLickPlay()
@@ -37,6 +39,12 @@ public class MainMenu : MonoBehaviour
    public void FadeComplete()
     {
         SceneManager.LoadScene("SceneThomas");
+    }
+
+
+    public void OnMusicValueChanged(float newValue)
+    {
+        music.volume = newValue;
     }
 
 }
