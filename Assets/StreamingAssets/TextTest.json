@@ -2,23 +2,26 @@
   "dialogs":
   [
     {
-      "id" : 1,
-      "name" : "A",
-      "dialog" : "azerty",
-      "characterPath" : "MaleSpritebySutemo",
-      "backgroundPath" : "Apartment_Exterior"
+      "id": 1,
+      "name": "A",
+      "dialog": "azerty",
+      "characterPath": "MaleSpritebySutemo",
+      "backgroundPath": "Apartment_Exterior",
+      "savePoint": false
     },
     {
       "id" : 2,
       "name" : "A",
       "dialog" : "qwerty",
       "characterPath" : "FemaleSpritebySutemo",
-      "backgroundPath" : "Futon_Room"
+      "backgroundPath": "Futon_Room",
+      "savePoint": true
     },
     {
-      "id" : 3,
-      "name" : "Yumi",
-      "dialog" : "What the hell?"
+      "id": 3,
+      "name": "Yumi",
+      "dialog": "What the hell?",
+      "savePoint": false
     }
   ]
 

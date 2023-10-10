@@ -83,6 +83,14 @@ public class MainGame : MonoBehaviour
         setDialogs(jDialogs);
 
     }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            OnClickNextDialog();
+        }
+
+    }
 
     void OnClickGoToSavePoint()
     {
@@ -148,6 +156,15 @@ public class MainGame : MonoBehaviour
         }
 
     }
+
+    public void CheckAndSetSavePoint(Dialog d)
+    {
+        if (d.savePoint == true)
+        {
+            savePoint.dialogId = d.id;
+        }
+    }
+
     // met les dialogues dans la liste de type DialogSequence
     public void setDialogs(Dialogs d)
     {
@@ -189,14 +206,7 @@ public class MainGame : MonoBehaviour
         } 
 
 
-    void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                OnClickNextDialog();
-            }
-
-        }
+    
 
 }
 
@@ -209,6 +219,7 @@ public class Dialog
     public string dialog;
     public string characterPath;
     public string backgroundPath;
+    public bool savePoint;
 
 }
 
