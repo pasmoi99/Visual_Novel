@@ -15,9 +15,9 @@ public class MainGame : MonoBehaviour
 
     public Button buttonNext;
 
-    public Button choice1;
-    public Button choice2;
-    public int choice;
+    public Button choice1; //bouton choix 1
+    public Button choice2; //bouton choix 2
+    public int choice; // pour id texte
 
     public TMP_Text goToSavePoint;
     public Image goToSavePointBox;
@@ -76,19 +76,23 @@ public class MainGame : MonoBehaviour
             buttonGoToSavePoint.gameObject.SetActive(true);
             buttonGoToBeginning.onClick.AddListener(OnClickGoToBeginning);
             buttonGoToSavePoint.onClick.AddListener(OnClickGoToSavePoint);
-            choice1.onClick.AddListener(Choice1);
-            choice2.onClick.AddListener(Choice2);
+            
         }
+
+        choice1.onClick.AddListener(Choice1);
+        choice2.onClick.AddListener(Choice2);
     }
 
     public void Choice1()
     {
         chapterCount++;
+        // ajouter truc pour rendre le bouton invisible
     }
 
     public void Choice2()
     {
         chapterCount += 2;
+        // ajouter truc pour rendre le bouton invisible
     }
 
     void Start()
