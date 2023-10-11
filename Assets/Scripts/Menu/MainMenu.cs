@@ -14,6 +14,7 @@ public class MainMenu : MonoBehaviour
     public Image imageButton;
     public List<TMPro.TextMeshProUGUI> textList;
     public AudioSource music;
+    public GameObject CanvasGroup;
 
 
     // transition entre les scenes
@@ -45,6 +46,15 @@ public class MainMenu : MonoBehaviour
     public void OnMusicValueChanged(float newValue)
     {
         music.volume = newValue;
+    }
+
+
+    public void OnCLickOptions()
+    {
+        CanvasGroup.gameObject.SetActive(true);
+        CanvasGroup.alpha = 0;
+
+
     }
 
 }

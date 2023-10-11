@@ -28,14 +28,17 @@ public class MainGame : MonoBehaviour
     private string jPath; //variable du chemin vers le fichier json
     private Dialogs jDialogs;
 
-
     private string jSavePath; //variable du chemin vers le fichier de sauvegarde json
     private string jSaveFile; //variable pour lire le fichier de sauvegarde json
+
 
     public TMP_Text textCharacterName;
     public TMP_Text textDialog;
     public Image spriteCharacter;
     public Image spriteBackground; //bg
+    public TMP_Text textChoice1; //text choix 1
+    public TMP_Text textChoice2; // text choix 2
+
     public List<DialogSequence> dialogsList = new List<DialogSequence>();
     private int _sequenceNumber = 1;
     private SavePoint savePoint;
@@ -50,7 +53,7 @@ public class MainGame : MonoBehaviour
         goToSavePointBox.gameObject.SetActive(false);
         goToSavePoint.gameObject.SetActive(false);
         buttonGoToBeginning.gameObject.SetActive(false);
-        buttonGoToSavePoint.gameObject.SetActive(false);
+        buttonGoToSavePoint.gameObject.SetActive(false); 
 
         jSavePath = Application.streamingAssetsPath + "/SavePoint.json"; //chemin fichier JSON des sauvegardes
 
@@ -59,7 +62,9 @@ public class MainGame : MonoBehaviour
         savePoint = JsonUtility.FromJson<SavePoint>(jSaveFile);
 
 
-        //si dialogId dans le Json de sauvegarde n'a pas été modifié, alors on commence normalement
+
+
+        //si dialogId dans le Json de sauvegarde n'a pas été modifié, alors on commence normalement 
         if (savePoint.dialogId == 0)
         {
             UpdateDialogSequence(dialogsList[0]);
@@ -84,23 +89,23 @@ public class MainGame : MonoBehaviour
     }
 
     public void Choice1()
-    {
+    {     
         chapterCount++;
-        // ajouter truc pour rendre le bouton invisible
+        choice1.gameObject.SetActive(false);
+
     }
 
     public void Choice2()
     {
         chapterCount += 2;
-        // ajouter truc pour rendre le bouton invisible
+        choice2.gameObject.SetActive(false);
     }
 
     void Start()
     {
 
-
         SelectNextFile(chapterCount);
-        chapterCount++;
+        chapterCount++; 
 
     }
     void Update()
@@ -149,6 +154,8 @@ public class MainGame : MonoBehaviour
     {
         textDialog.text = s.textDialog;
         textCharacterName.text = s.textCharacterName;
+        textChoice1.text = s.textChoice1;
+        textChoice2.text = s.textChoice2;
        
         Sprite characterSprite = Resources.Load<Sprite>(s.characterPath);
         if (characterSprite != null)
@@ -181,14 +188,14 @@ public class MainGame : MonoBehaviour
 
         if (_sequenceNumber >= dialogsList.Count)
         {
-            buttonNext.gameObject.SetActive(false);
+            buttonNext.gameObject.SetActive(false); //desactiver le bouton next quand plus besoin
 
         }
 
 
         if (_sequenceNumber < dialogsList.Count)
         {
-            UpdateDialogSequence(dialogsList[_sequenceNumber]);
+            UpdateDialogSequence(dialogsList[_sequenceNumber]); 
         }
         
         else
@@ -215,7 +222,7 @@ public class MainGame : MonoBehaviour
     {
         for (int i = 0; i < d.dialogs.Length; i++)
         {
-            dialogsList.Add(new DialogSequence() { id = d.dialogs[i].id, textCharacterName = d.dialogs[i].name, textDialog = d.dialogs[i].dialog, characterPath = d.dialogs[i].characterPath, backgroundPath = d.dialogs[i].backgroundPath}); 
+            dialogsList.Add(new DialogSequence() { id = d.dialogs[i].id, textCharacterName = d.dialogs[i].name, textDialog = d.dialogs[i].dialog, characterPath = d.dialogs[i].characterPath, backgroundPath = d.dialogs[i].backgroundPath, textChoice1 = d.dialogs[i].textChoice1, textChoice2 = d.dialogs[i].textChoice2}); 
         }
     }
 
@@ -264,6 +271,8 @@ public class Dialog
     public string dialog;
     public string characterPath;
     public string backgroundPath;
+    public string? textChoice1;
+    public string? textChoice2;
     public bool savePoint;
 }
 

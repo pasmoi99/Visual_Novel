@@ -12,6 +12,8 @@ public class DialogSequence : MonoBehaviour
     public string backgroundPath;
     public Sprite spriteCharacter;
     public Sprite spriteBackground; //bg
+    public string textChoice1;
+    public string textChoice2;
     
 
     void Start()

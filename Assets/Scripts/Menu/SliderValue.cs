@@ -13,9 +13,4 @@ public class SliderValue : MonoBehaviour
         int valueInt = (int)Mathf.Round(newValue * 100.0f);
         textValue.text = valueInt.ToString();
     }
-
-
-
-
-
 }
