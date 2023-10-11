@@ -1,0 +1,29 @@
+{
+  "dialogs": [
+    {
+      "id": 1,
+      "name": "A",
+      "dialog": "azerty",
+      "characterPath": "MaleSpritebySutemo",
+      "backgroundPath": "Futon_Room",
+      "savePoint": true
+    },
+    {
+      "id": 2,
+      "name": "Yumi",
+      "dialog": "qwerty ...?",
+      "characterPath": "FemaleSpritebySutemo",
+      "backgroundPath": "Apartment_Exterior",
+      "savePoint": false
+    },
+    {
+      "id": 3,
+      "name": "Yumi",
+      "dialog": "Wait, what the hell?",
+      "savePoint": false
+    }
+  ]
+
+
+
+}

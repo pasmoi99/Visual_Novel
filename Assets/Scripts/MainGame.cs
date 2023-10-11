@@ -36,6 +36,8 @@ public class MainGame : MonoBehaviour
     private int _sequenceNumber = 0;
     private SavePoint savePoint;
 
+    private int chapterCount = 0;
+
     //cache les bouttons de choix du moment on l'on reprends
     private void Awake()
     {
@@ -73,16 +75,11 @@ public class MainGame : MonoBehaviour
 
 
     void Start()
-    {   
+    {
 
 
-        jPath = Application.streamingAssetsPath + "/TextTest.json"; //chemin fichier JSON des dialogues
-
-        jFile = File.ReadAllText(jPath); //lecture du fichier JSON des dialogues et stockage dans jFile
-
-        jDialogs = JsonUtility.FromJson<Dialogs>(jFile); //conversion de jFile en List
-
-        setDialogs(jDialogs);
+        SelectNextFile(chapterCount);
+        chapterCount++;
 
     }
     void Update()
@@ -94,6 +91,16 @@ public class MainGame : MonoBehaviour
 
     }
 
+    void SelectNextFile( int chapter)
+    {
+        jPath = Application.streamingAssetsPath + "/TextTest" + chapter + ".json"; //chemin fichier JSON des dialogues
+
+        jFile = File.ReadAllText(jPath); //lecture du fichier JSON des dialogues et stockage dans jFile
+
+        jDialogs = JsonUtility.FromJson<Dialogs>(jFile); //conversion de jFile en List
+
+        setDialogs(jDialogs);
+    }
     void OnClickGoToSavePoint()
     {
         _sequenceNumber = savePoint.dialogId;
