@@ -15,6 +15,10 @@ public class MainGame : MonoBehaviour
 
     public Button buttonNext;
 
+    public Button choice1;
+    public Button choice2;
+    public int choice;
+
     public TMP_Text goToSavePoint;
     public Image goToSavePointBox;
     public Button buttonGoToBeginning;
@@ -33,7 +37,7 @@ public class MainGame : MonoBehaviour
     public Image spriteCharacter;
     public Image spriteBackground; //bg
     public List<DialogSequence> dialogsList = new List<DialogSequence>();
-    private int _sequenceNumber = 0;
+    private int _sequenceNumber = 1;
     private SavePoint savePoint;
 
     private int chapterCount = 0;
@@ -41,6 +45,8 @@ public class MainGame : MonoBehaviour
     //cache les bouttons de choix du moment on l'on reprends
     private void Awake()
     {
+        choice1.gameObject.SetActive(false);
+        choice2.gameObject.SetActive(false);
         goToSavePointBox.gameObject.SetActive(false);
         goToSavePoint.gameObject.SetActive(false);
         buttonGoToBeginning.gameObject.SetActive(false);
@@ -70,9 +76,20 @@ public class MainGame : MonoBehaviour
             buttonGoToSavePoint.gameObject.SetActive(true);
             buttonGoToBeginning.onClick.AddListener(OnClickGoToBeginning);
             buttonGoToSavePoint.onClick.AddListener(OnClickGoToSavePoint);
+            choice1.onClick.AddListener(Choice1);
+            choice2.onClick.AddListener(Choice2);
         }
     }
 
+    public void Choice1()
+    {
+        chapterCount++;
+    }
+
+    public void Choice2()
+    {
+        chapterCount += 2;
+    }
 
     void Start()
     {
@@ -91,6 +108,8 @@ public class MainGame : MonoBehaviour
 
     }
 
+
+    // permet de selectionner le passage du jeu qui va etre joué
     void SelectNextFile( int chapter)
     {
         jPath = Application.streamingAssetsPath + "/TextTest" + chapter + ".json"; //chemin fichier JSON des dialogues
@@ -150,6 +169,8 @@ public class MainGame : MonoBehaviour
 
     }
 
+
+    //permet de passer au dialogue suivant
     public void OnClickNextDialog()
     {
         _sequenceNumber++;
@@ -165,8 +186,16 @@ public class MainGame : MonoBehaviour
         {
             UpdateDialogSequence(dialogsList[_sequenceNumber]);
         }
-        CheckAndSetSavePoint(jDialogs.dialogs[_sequenceNumber]);
+        
+        else
+        {
+            choice1.gameObject.SetActive(true);
+            choice2.gameObject.SetActive(true);
 
+
+            chapterCount++;
+        }
+        CheckAndSetSavePoint(jDialogs.dialogs[_sequenceNumber]);
     }
 
     public void CheckAndSetSavePoint(Dialog d)
@@ -232,7 +261,6 @@ public class Dialog
     public string characterPath;
     public string backgroundPath;
     public bool savePoint;
-
 }
 
 
