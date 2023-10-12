@@ -49,12 +49,12 @@ public class MainMenu : MonoBehaviour
     }
 
 
-    public void OnCLickOptions()
+     /* public void OnCLickOptions()
     {
         CanvasGroup.gameObject.SetActive(true);
-        CanvasGroup.alpha = 0;
+        CanvasGroup.Alpha = 0;
 
 
-    }
+    } */
 
 }

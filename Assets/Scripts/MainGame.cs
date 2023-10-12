@@ -13,23 +13,23 @@ public class MainGame : MonoBehaviour
     // public static MainGame instance;
 
 
-    public Button buttonNext;
+    public static Button buttonNext;
 
     public Button choice1; //bouton choix 1
     public Button choice2; //bouton choix 2
     public int choice; // pour id texte
 
-    public TMP_Text goToSavePoint;
+   /* public TMP_Text goToSavePoint;
     public Image goToSavePointBox;
     public Button buttonGoToBeginning;
-    public Button buttonGoToSavePoint;
-    
+    public Button buttonGoToSavePoint; */
+
     private string jFile; //variable pour lire le fichier json
     private string jPath; //variable du chemin vers le fichier json
     private Dialogs jDialogs;
 
-    private string jSavePath; //variable du chemin vers le fichier de sauvegarde json
-    private string jSaveFile; //variable pour lire le fichier de sauvegarde json
+   /* private string jSavePath; //variable du chemin vers le fichier de sauvegarde json
+    private string jSaveFile; //variable pour lire le fichier de sauvegarde json */
 
 
     public TMP_Text textCharacterName;
@@ -40,7 +40,7 @@ public class MainGame : MonoBehaviour
     public TMP_Text textChoice2; // text choix 2
 
     public List<DialogSequence> dialogsList = new List<DialogSequence>();
-    private int _sequenceNumber = 1;
+    private int _sequenceNumber = 0;
     private SavePoint savePoint;
 
     private int chapterCount = 0;
@@ -50,7 +50,7 @@ public class MainGame : MonoBehaviour
     {
         choice1.gameObject.SetActive(false);
         choice2.gameObject.SetActive(false);
-        goToSavePointBox.gameObject.SetActive(false);
+       /* goToSavePointBox.gameObject.SetActive(false);
         goToSavePoint.gameObject.SetActive(false);
         buttonGoToBeginning.gameObject.SetActive(false);
         buttonGoToSavePoint.gameObject.SetActive(false); 
@@ -59,7 +59,7 @@ public class MainGame : MonoBehaviour
 
         jSaveFile = File.ReadAllText(jSavePath); //lecture du fichier JSON des sauvegardes et stockage dans jSaveFile
 
-        savePoint = JsonUtility.FromJson<SavePoint>(jSaveFile);
+        savePoint = JsonUtility.FromJson<SavePoint>(jSaveFile);*/
 
 
 
