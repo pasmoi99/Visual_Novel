@@ -13,9 +13,13 @@ public class MainMenu : MonoBehaviour
     public List<Button> buttonsList;
     public Image imageButton;
     public List<TMPro.TextMeshProUGUI> textList;
+    public Button returnButton;
+    public Button backButton;
     public AudioSource music;
     public CanvasGroup options;
+    public CanvasGroup credits;
     public float transparancy = 0;
+    public Button quitButton;
 
     // transition entre les scenes
     public void OnCLickPlay()
@@ -53,6 +57,29 @@ public class MainMenu : MonoBehaviour
         options.gameObject.SetActive(true);
         options.alpha = 0;
         options.DOFade(1,0.2f);
+    }
 
+    public void OnCLickReturn()
+    {
+        options.gameObject.SetActive(false);
+        options.DOFade(0, 0.2f);
+    }
+
+    public void OnCLickCredits()
+    {
+        credits.gameObject.SetActive(true);
+        credits.alpha = 0;
+        credits.DOFade(1, 0.2f);
+    }
+
+    public void OnCLickBackMenu()
+    {
+        credits.gameObject.SetActive(false);
+        credits.DOFade(0, 0.2f);
+    }
+
+    public void OnClikQuit()
+    {
+        Application.Quit();
     }
 }
