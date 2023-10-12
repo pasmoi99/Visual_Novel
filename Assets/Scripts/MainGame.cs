@@ -47,10 +47,10 @@ public class MainGame : MonoBehaviour
 
     //cache les bouttons de choix du moment on l'on reprends
     private void Awake()
-    {
+    {   
         choice1.gameObject.SetActive(false);
         choice2.gameObject.SetActive(false);
-       /* goToSavePointBox.gameObject.SetActive(false);
+        goToSavePointBox.gameObject.SetActive(false);
         goToSavePoint.gameObject.SetActive(false);
         buttonGoToBeginning.gameObject.SetActive(false);
         buttonGoToSavePoint.gameObject.SetActive(false); 
@@ -59,7 +59,7 @@ public class MainGame : MonoBehaviour
 
         jSaveFile = File.ReadAllText(jSavePath); //lecture du fichier JSON des sauvegardes et stockage dans jSaveFile
 
-        savePoint = JsonUtility.FromJson<SavePoint>(jSaveFile);*/
+        savePoint = JsonUtility.FromJson<SavePoint>(jSaveFile);
 
 
 
