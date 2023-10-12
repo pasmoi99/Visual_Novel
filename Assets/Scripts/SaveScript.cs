@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-;
+
 
 public class SaveScript : MonoBehaviour
 {
@@ -16,6 +16,7 @@ public class SaveScript : MonoBehaviour
 
     private string jSavePath; //variable du chemin vers le fichier de sauvegarde json
     private string jSaveFile; //variable pour lire le fichier de sauvegarde json
+
 
 
 
