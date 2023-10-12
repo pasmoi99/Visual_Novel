@@ -65,13 +65,14 @@ public class MainGame : MonoBehaviour
 
         savePoint = JsonUtility.FromJson<SavePoint>(jSaveFile);
 
-
+        SelectNextFile(chapterCount);
+        chapterCount++;
 
 
         //si dialogId dans le Json de sauvegarde n'a pas été modifié, alors on commence normalement 
         if (savePoint.dialogId == 0)
         {
-            SelectNextFile(chapterCount);
+         //   SelectNextFile(chapterCount);
             UpdateDialogSequence(dialogsList[0]);
             //charger images 
             LoadImages(dialogsList[_sequenceNumber].characterPath, dialogsList[_sequenceNumber].backgroundPath);
@@ -99,10 +100,11 @@ public class MainGame : MonoBehaviour
 
         }
 
-        choice1.onClick.AddListener(() => { Choice(1); });
-        choice2.onClick.AddListener(() => { Choice(2); });
+       choice1.onClick.AddListener(() => { Choice(1); });
+       choice2.onClick.AddListener(() => { Choice(2); });
        
     }
+
 
     private void Choice(int v)
     {
@@ -113,13 +115,12 @@ public class MainGame : MonoBehaviour
     void Start()
     {
 
-        SelectNextFile(chapterCount);
-        chapterCount++;
+
 
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) )
         {
             OnClickNextDialog();
         }
@@ -130,6 +131,7 @@ public class MainGame : MonoBehaviour
     // permet de selectionner le passage du jeu qui va etre joué
     void SelectNextFile(int chapter)
     {
+
         jPath = Application.streamingAssetsPath + "/TextTest" + chapter + ".json"; //chemin fichier JSON des dialogues
 
         jFile = File.ReadAllText(jPath); //lecture du fichier JSON des dialogues et stockage dans jFile
@@ -197,34 +199,28 @@ public class MainGame : MonoBehaviour
     {
         _sequenceNumber++;
 
-        if (_sequenceNumber == dialogsList.Count-1 /* && finalFile==true*/)
+        if (_sequenceNumber == dialogsList.Count /* && finalFile==true*/)
         {
             buttonNext.gameObject.SetActive(false); //desactiver le bouton next quand plus besoin
-
-        }
-
-
-        if (_sequenceNumber == dialogsList.Count-1 /*&& finalFile == false*/)
-        {
-            buttonNext.gameObject.SetActive(false); //desactiver le bouton next quand plus besoin
-
             SetChoiceButtons(true);
-
+            SelectNextFile(chapterCount);
         }
 
-        if (_sequenceNumber < dialogsList.Count-1)
+
+        if (_sequenceNumber < dialogsList.Count)
         {
             UpdateDialogSequence(dialogsList[_sequenceNumber]);
              // CheckAndSetSavePoint(jDialogs.dialogs[_sequenceNumber]);
         }
-        else
-        {
-            SelectNextFile(chapterCount);
-        }
-       
 
-        
-        
+        if (choice1.IsActive() == false)
+        {
+            buttonNext.gameObject.SetActive(true);
+        }
+
+
+
+
 
     }
 
@@ -246,6 +242,7 @@ public class MainGame : MonoBehaviour
     // met les dialogues dans la liste de type DialogSequence
     public void setDialogs(Dialogs d)
     {
+        dialogsList = new List<DialogSequence>();
         for (int i = 0; i < d.dialogs.Length; i++)
         {
             dialogsList.Add(new DialogSequence()
