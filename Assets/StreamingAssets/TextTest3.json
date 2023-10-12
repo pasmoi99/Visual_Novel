@@ -1,0 +1,36 @@
+{
+  "dialogs": [
+    {
+      "id": 1,
+      "name": "A",
+      "dialog": "chap3.1",
+      "characterPath": "Acteur",
+      "backgroundPath": "Futon_Room",
+      "savePoint": false
+    },
+    {
+      "id": 2,
+      "name": "Yumi",
+      "dialog": "chap3.2",
+      "characterPath": "Tatsuo",
+      "backgroundPath": "Apartment_Exterior",
+      "savePoint": false
+    },
+    {
+      "id": 3,
+      "name": "Yumi",
+      "dialog": "chap3.3",
+      "characterPath": "Acteur",
+      "backgroundPath": "Apartment_Exterior",
+      "choice1": "aller dans la cuisine",
+      "choice2": "aller dans le couloir",
+      "savePoint": true
+    }
+  ]
+
+ 
+
+
+
+
+}
