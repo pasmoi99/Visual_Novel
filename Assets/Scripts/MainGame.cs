@@ -151,10 +151,13 @@ public class MainGame : MonoBehaviour
 
         setDialogs(jDialogs);
 
+
+
         //finalFile = JsonUtility.FromJson<bool>(jFile);
     }
     void OnClickGoToSavePoint()
     {
+        chapterCount = savePoint.chapterId;
         _sequenceNumber = savePoint.dialogId;
         UpdateDialogSequence(dialogsList[_sequenceNumber]);
         goToSavePointBox.gameObject.SetActive(false);
@@ -269,6 +272,15 @@ public class MainGame : MonoBehaviour
                 textChoice1 = d.dialogs[i].choice1,
                 textChoice2 = d.dialogs[i].choice2
             });
+            if (d.finalFile == null)
+            {
+                finalFile = false;
+            }
+            else
+            {
+                
+                finalFile = (bool)d.finalFile;
+            }
         }
     }
 
@@ -320,7 +332,6 @@ public class Dialog
     public string? choice1;
     public string? choice2;
     public bool savePoint;
-    public bool finalFile;
 }
 
 
@@ -328,4 +339,5 @@ public class Dialog
 public class SavePoint
 {
     public int dialogId;
+    public int chapterId;
 }
