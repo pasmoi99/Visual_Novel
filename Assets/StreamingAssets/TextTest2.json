@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "A",
-      "dialog": "chap3.1",
+      "dialog": "chap2.1",
       "characterPath": "MaleSpritebySutemo",
       "backgroundPath": "Futon_Room",
       "savePoint": false
@@ -11,7 +11,7 @@
     {
       "id": 2,
       "name": "Yumi",
-      "dialog": "chap3.2",
+      "dialog": "chap2.2",
       "characterPath": "FemaleSpritebySutemo",
       "backgroundPath": "Apartment_Exterior",
       "savePoint": false
@@ -19,13 +19,13 @@
     {
       "id": 3,
       "name": "Yumi",
-      "dialog": "chap3.3",
+      "dialog": "chap2.3",     
+      "characterPath": "FemaleSpritebySutemo",
+      "backgroundPath": "Apartment_Exterior",
       "choice1": "aller dans la cuisine",
       "choice2": "aller dans le couloir",
       "savePoint": true
     }
   ]
-
-
 
 }

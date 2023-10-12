@@ -11,6 +11,5 @@ public class ChoiceScript : MonoBehaviour
     public int choice; // pour id texte
 
 
-    MainGame.buttonNext
 
 }
