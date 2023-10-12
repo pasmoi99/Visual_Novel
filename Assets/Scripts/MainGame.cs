@@ -66,8 +66,6 @@ public class MainGame : MonoBehaviour
         savePoint = JsonUtility.FromJson<SavePoint>(jSaveFile);
 
         SelectNextFile(chapterCount);
-        chapterCount++;
-
 
         //si dialogId dans le Json de sauvegarde n'a pas été modifié, alors on commence normalement 
         if (savePoint.dialogId == 0)
@@ -108,8 +106,22 @@ public class MainGame : MonoBehaviour
 
     private void Choice(int v)
     {
-        chapterCount += v;
+        if(v==1)
+        {
+            chapterCount++;
+        }
+
+        if(v==2)
+        {
+            chapterCount += 2;
+        }
+
+        SelectNextFile(chapterCount);
         SetChoiceButtons(false);
+        buttonNext.gameObject.SetActive(true);
+        _sequenceNumber = 0;
+        UpdateDialogSequence(dialogsList[_sequenceNumber]);
+
     }
 
     void Start()
@@ -203,7 +215,6 @@ public class MainGame : MonoBehaviour
         {
             buttonNext.gameObject.SetActive(false); //desactiver le bouton next quand plus besoin
             SetChoiceButtons(true);
-            SelectNextFile(chapterCount);
         }
 
 
@@ -213,10 +224,10 @@ public class MainGame : MonoBehaviour
              // CheckAndSetSavePoint(jDialogs.dialogs[_sequenceNumber]);
         }
 
-        if (choice1.IsActive() == false)
+       if (choice1.IsActive() == false)
         {
             buttonNext.gameObject.SetActive(true);
-        }
+        } 
 
 
 
