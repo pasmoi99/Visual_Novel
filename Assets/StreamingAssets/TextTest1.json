@@ -28,5 +28,7 @@
       "choice2": "aller dans le couloir",
       "savePoint": true
     }
-  ]
+  ],
+
+  "finalFile": false
 }

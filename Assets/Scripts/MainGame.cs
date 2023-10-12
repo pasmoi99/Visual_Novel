@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-
-
 using System.IO;
 using System;
+using UnityEngine.SceneManagement;
 
 public class MainGame : MonoBehaviour
 {
@@ -166,6 +165,7 @@ public class MainGame : MonoBehaviour
 
     void OnClickGoToBeginning()
     {
+        chapterCount = 1;
         _sequenceNumber = 0;
         UpdateDialogSequence(dialogsList[0]);
         goToSavePointBox.gameObject.SetActive(false);
@@ -211,26 +211,29 @@ public class MainGame : MonoBehaviour
     {
         _sequenceNumber++;
 
-        if (_sequenceNumber == dialogsList.Count /* && finalFile==true*/)
+        if (_sequenceNumber == dialogsList.Count && finalFile==false)
         {
             buttonNext.gameObject.SetActive(false); //desactiver le bouton next quand plus besoin
             SetChoiceButtons(true);
+        }
+
+        if (_sequenceNumber == dialogsList.Count && finalFile==true)
+        {
+            buttonNext.gameObject.SetActive(false); //desactiver le bouton next quand plus besoin
+
+            CheckAndSetSavePoint(jDialogs.dialogs[_sequenceNumber]);
         }
 
 
         if (_sequenceNumber < dialogsList.Count)
         {
             UpdateDialogSequence(dialogsList[_sequenceNumber]);
-             // CheckAndSetSavePoint(jDialogs.dialogs[_sequenceNumber]);
         }
 
        if (choice1.IsActive() == false)
         {
             buttonNext.gameObject.SetActive(true);
         } 
-
-
-
 
 
     }
@@ -263,8 +266,8 @@ public class MainGame : MonoBehaviour
                 textDialog = d.dialogs[i].dialog,
                 characterPath = d.dialogs[i].characterPath,
                 backgroundPath = d.dialogs[i].backgroundPath,
-                textChoice1 = d.dialogs[i].textChoice1,
-                textChoice2 = d.dialogs[i].textChoice2
+                textChoice1 = d.dialogs[i].choice1,
+                textChoice2 = d.dialogs[i].choice2
             });
         }
     }
@@ -314,8 +317,8 @@ public class Dialog
     public string dialog;
     public string characterPath;
     public string backgroundPath;
-    public string? textChoice1;
-    public string? textChoice2;
+    public string? choice1;
+    public string? choice2;
     public bool savePoint;
     public bool finalFile;
 }
