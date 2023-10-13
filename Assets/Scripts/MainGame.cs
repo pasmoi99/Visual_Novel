@@ -233,7 +233,13 @@ public class MainGame : MonoBehaviour
 
 
                 }
-                if (currentChara != jDialogs.nextChara)
+                if (jDialogs.nextChara == -1 && _sequenceNumber == dialogsList.Count)
+                {
+                    SetSaveChoice(false);
+                    SceneManager.LoadScene("MainMenu");
+                }
+
+                else if (currentChara != jDialogs.nextChara)
                 {
                     currentChara = jDialogs.nextChara;
                     SetSaveChoice(false);
@@ -242,13 +248,9 @@ public class MainGame : MonoBehaviour
                     SelectNextFile(chapterCount, perso[currentChara]);
                     UpdateDialogSequence(dialogsList[0]);
 
+                   
                 }
-                if (jDialogs.nextChara == -1)
-                {
-                    SetSaveChoice(false);
-                    SceneManager.LoadScene("Menu");
-
-                }
+              
             }
         
         }
