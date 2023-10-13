@@ -47,7 +47,66 @@
       "dialog" : "Hmmm, enfin une occasion de pouvoir quitter cette vie !",
       "characterPath" : "Aneko",
       "backgroundPath": "BGBase",
-      "savePoint": true
+      "savePoint": false
+    },
+    {
+      "id" : 7,
+      "name" : "Kagami",
+      "dialog" : "Pour la première Run vous jouez Tatsuo",
+      "characterPath" : "Kagami_Neutre",
+      "backgroundPath": "BGBase",
+      "savePoint": false
+    },
+    {
+      "id": 8,
+      "name": "Tatsuo",
+      "dialog": "Raaah ce rôle d'acteur m'ennuie !! Il me faut quelque chose de plus intéressant !!",
+      "characterPath": "Tatsuo",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 9,
+      "name": "Tatsuo",
+      "dialog": "J'ai envie de tuer !! Je sais, je vais piéger celui-là !",
+      "characterPath": "Tatsuo",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 10,
+      "name": "",
+      "dialog": "Sur le chemin, Tatsuo attrape le chef d'orchestre pour le tuer et par la suite prendre son visage",
+      "characterPath": "",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 11,
+      "name": "",
+      "dialog": "Il hurte quelqu'un en marchant",
+      "characterPath": "",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 12,
+      "name": "Tatsuo",
+      "dialog": "OOOh",
+      "characterPath": "CDO_Colere",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 13,
+      "name": "Metteur en scène",
+      "dialog": "Ah, vous voilà enfin ! Mais où étiez vous passé ? Cela fait un moment que l'on vous cherche ! A cause de vous on a dû mettre en pause la scène !",
+      "characterPath": "MES",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
     }
-  ]
+  ],
+  "finalFile" : false
+
+
 }

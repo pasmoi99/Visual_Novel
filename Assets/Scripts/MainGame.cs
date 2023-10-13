@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using System.IO;
 using System;
 using UnityEngine.SceneManagement;
-using UnityEditor.Experimental.GraphView;
+
 
 public class MainGame : MonoBehaviour
 {
@@ -382,8 +382,8 @@ public class Dialog
     public int id;
     public string? name; //cacher le nom et les textes
     public string dialog;
-    public string characterPath;
-    public string backgroundPath;
+    public string? characterPath;
+    public string? backgroundPath;
     public string? choice1;
     public string? choice2;
     public bool savePoint;
