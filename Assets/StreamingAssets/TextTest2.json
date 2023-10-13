@@ -6,7 +6,8 @@
       "dialog": "chap2.1",
       "characterPath": "MaleSpritebySutemo",
       "backgroundPath": "Futon_Room",
-      "savePoint": false
+      "savePoint": false,
+      "chapterId" : 2
     },
     {
       "id": 2,
@@ -14,7 +15,8 @@
       "dialog": "chap2.2",
       "characterPath": "FemaleSpritebySutemo",
       "backgroundPath": "Apartment_Exterior",
-      "savePoint": false
+      "savePoint": false,
+      "chapterId" : 2
     },
     {
       "id": 3,
@@ -24,8 +26,9 @@
       "backgroundPath": "Apartment_Exterior",
       "choice1": "aller dans la cuisine",
       "choice2": "aller dans le couloir",
-      "savePoint": true
+      "savePoint": false,
+      "chapterId" : 2
     }
-  ]
-
+  ],
+  "finalFile": false
 }

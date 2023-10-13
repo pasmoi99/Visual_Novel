@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-
-
 using System.IO;
 using System;
+using UnityEngine.SceneManagement;
+using UnityEditor.Experimental.GraphView;
 
 public class MainGame : MonoBehaviour
 {
@@ -46,12 +46,14 @@ public class MainGame : MonoBehaviour
     private SavePoint savePoint;
 
     private int chapterCount = 1;
+    private int chapterProgress = 0;
 
     private bool finalFile;
 
+
     //cache les bouttons de choix du moment on l'on reprends
     private void Awake()
-    {   
+    {
         choice1.gameObject.SetActive(false);
         choice2.gameObject.SetActive(false);
         goToSavePointBox.gameObject.SetActive(false);
@@ -59,25 +61,26 @@ public class MainGame : MonoBehaviour
         buttonGoToBeginning.gameObject.SetActive(false);
         buttonGoToSavePoint.gameObject.SetActive(false);
 
+        
+
         jSavePath = Application.streamingAssetsPath + "/SavePoint.json"; //chemin fichier JSON des sauvegardes
 
         jSaveFile = File.ReadAllText(jSavePath); //lecture du fichier JSON des sauvegardes et stockage dans jSaveFile
 
         savePoint = JsonUtility.FromJson<SavePoint>(jSaveFile);
 
+        SelectNextFile(chapterCount);
 
-
-
-        //si dialogId dans le Json de sauvegarde n'a pas été modifié, alors on commence normalement 
+        //si dialogId dans le Json de sauvegarde n'a pas ï¿½tï¿½ modifiï¿½, alors on commence normalement 
         if (savePoint.dialogId == 0)
-        {
-            SelectNextFile(chapterCount);
+        { 
+            //   SelectNextFile(chapterCount);
             UpdateDialogSequence(dialogsList[0]);
             //charger images 
             LoadImages(dialogsList[_sequenceNumber].characterPath, dialogsList[_sequenceNumber].backgroundPath);
         }
 
-        //sinon, on demande à l'utilisateur a partir de quel point il veut recomencer
+        //sinon, on demande ï¿½ l'utilisateur a partir de quel point il veut recomencer
         else
         {
             buttonNext.gameObject.SetActive(false);
@@ -93,28 +96,47 @@ public class MainGame : MonoBehaviour
             buttonGoToBeginning.gameObject.SetActive(true);
             buttonGoToSavePoint.gameObject.SetActive(true);
 
-            buttonGoToBeginning.onClick.AddListener(OnClickGoToBeginning);
-            buttonGoToSavePoint.onClick.AddListener(OnClickGoToSavePoint);
-            
+
+
 
         }
 
+        buttonGoToBeginning.onClick.AddListener(OnClickGoToBeginning);
+        buttonGoToSavePoint.onClick.AddListener(OnClickGoToSavePoint);
+
+        _sequenceNumber = savePoint.dialogId;//test
+        chapterCount = savePoint.chapterId; //test
+
         choice1.onClick.AddListener(() => { Choice(1); });
         choice2.onClick.AddListener(() => { Choice(2); });
-       
+
     }
+
 
     private void Choice(int v)
     {
-        chapterCount += v;
+        if (v == 1)
+        {
+            chapterCount++;
+        }
+
+        if (v == 2)
+        {
+            chapterCount += 2;
+        }
+
+        SelectNextFile(chapterCount);
         SetChoiceButtons(false);
+        buttonNext.gameObject.SetActive(true);
+        _sequenceNumber = 0;
+        UpdateDialogSequence(dialogsList[_sequenceNumber]);
+
     }
 
     void Start()
     {
 
-        SelectNextFile(chapterCount);
-        chapterCount++;
+
 
     }
     void Update()
@@ -127,9 +149,10 @@ public class MainGame : MonoBehaviour
     }
 
 
-    // permet de selectionner le passage du jeu qui va etre joué
+    // permet de selectionner le passage du jeu qui va etre jouï¿½
     void SelectNextFile(int chapter)
     {
+        chapterProgress = chapter;
         jPath = Application.streamingAssetsPath + "/TextTest" + chapter + ".json"; //chemin fichier JSON des dialogues
 
         jFile = File.ReadAllText(jPath); //lecture du fichier JSON des dialogues et stockage dans jFile
@@ -138,22 +161,33 @@ public class MainGame : MonoBehaviour
 
         setDialogs(jDialogs);
 
-        //finalFile = JsonUtility.FromJson<bool>(jFile);
+
+
+        // finalFile = JsonUtility.FromJson<bool>(jFile); 
     }
     void OnClickGoToSavePoint()
     {
-        _sequenceNumber = savePoint.dialogId;
-        UpdateDialogSequence(dialogsList[_sequenceNumber]);
-        goToSavePointBox.gameObject.SetActive(false);
-        goToSavePoint.gameObject.SetActive(false);
-        buttonGoToBeginning.gameObject.SetActive(false);
-        buttonGoToSavePoint.gameObject.SetActive(false);
+        if (savePoint != null)
+        {
+            chapterCount = savePoint.chapterId;
+            _sequenceNumber = savePoint.dialogId;
+            UpdateDialogSequence(dialogsList[_sequenceNumber]);
+            buttonNext.gameObject.SetActive(true);
+
+            goToSavePointBox.gameObject.SetActive(false);
+            goToSavePoint.gameObject.SetActive(false);
+            buttonGoToBeginning.gameObject.SetActive(false);
+            buttonGoToSavePoint.gameObject.SetActive(false);
+        }
     }
 
     void OnClickGoToBeginning()
     {
+        chapterCount = 1;
         _sequenceNumber = 0;
         UpdateDialogSequence(dialogsList[0]);
+        buttonNext.gameObject.SetActive(true);
+
         goToSavePointBox.gameObject.SetActive(false);
         goToSavePoint.gameObject.SetActive(false);
         buttonGoToBeginning.gameObject.SetActive(false);
@@ -167,6 +201,7 @@ public class MainGame : MonoBehaviour
         textCharacterName.text = s.textCharacterName;
         textChoice1.text = s.textChoice1;
         textChoice2.text = s.textChoice2;
+
 
         Sprite characterSprite = Resources.Load<Sprite>(s.characterPath);
         if (characterSprite != null)
@@ -197,56 +232,78 @@ public class MainGame : MonoBehaviour
     {
         _sequenceNumber++;
 
-        if (_sequenceNumber == dialogsList.Count-1 /* && finalFile==true*/)
+        if (_sequenceNumber == dialogsList.Count)
         {
-            buttonNext.gameObject.SetActive(false); //desactiver le bouton next quand plus besoin
+            buttonNext.gameObject.SetActive(false);
 
+            if (chapterProgress == chapterCount)
+            {
+
+                SetChoiceButtons(true);//test
+
+
+            }
+
+            if (finalFile == true)
+            {
+                SetChoiceButtons(false);
+                goToSavePointBox.gameObject.SetActive(true); //test
+                goToSavePoint.gameObject.SetActive(true);//test
+                buttonGoToBeginning.gameObject.SetActive(true);//test
+                buttonGoToSavePoint.gameObject.SetActive(true);//test 
+            }
+            else
+            {
+                Debug.LogError("erreur chargement");
+            }
         }
 
 
-        if (_sequenceNumber == dialogsList.Count-1 /*&& finalFile == false*/)
-        {
-            buttonNext.gameObject.SetActive(false); //desactiver le bouton next quand plus besoin
-
-            SetChoiceButtons(true);
-
-        }
-
-        if (_sequenceNumber < dialogsList.Count-1)
+        if (_sequenceNumber < dialogsList.Count)
         {
             UpdateDialogSequence(dialogsList[_sequenceNumber]);
-             // CheckAndSetSavePoint(jDialogs.dialogs[_sequenceNumber]);
         }
-        else
-        {
-            _sequenceNumber = 0;
-            SelectNextFile(chapterCount);
-        }
-       
 
-        
-        
+
+
+
 
     }
+
+    /* public void SetChapterEnd()
+     {
+         DialogSequence lastDialog = dialogsList.FindLast(dialog => dialog.chapterId == chapterCount);
+
+         if (lastDialog != null)
+         {
+             CheckAndSetSavePoint(lastDialog);
+
+         }
+     } */
 
     public void SetChoiceButtons(bool b)
     {
         choice1.gameObject.SetActive(b);
         choice2.gameObject.SetActive(b);
     }
-    
-    public void CheckAndSetSavePoint(Dialog d)
+
+    public void CheckAndSetSavePoint(DialogSequence d)
     {
         if (d.savePoint == true)
         {
             savePoint.dialogId = d.id;
-            JsonUtility.ToJson(savePoint);
+            savePoint.chapterId = chapterCount;
+            File.WriteAllText(jSavePath, JsonUtility.ToJson(savePoint));//test
+                                                                        // JsonUtility.ToJson(savePoint);
+
+
         }
     }
 
     // met les dialogues dans la liste de type DialogSequence
     public void setDialogs(Dialogs d)
     {
+        dialogsList = new List<DialogSequence>();
         for (int i = 0; i < d.dialogs.Length; i++)
         {
             dialogsList.Add(new DialogSequence()
@@ -256,66 +313,80 @@ public class MainGame : MonoBehaviour
                 textDialog = d.dialogs[i].dialog,
                 characterPath = d.dialogs[i].characterPath,
                 backgroundPath = d.dialogs[i].backgroundPath,
-                textChoice1 = d.dialogs[i].textChoice1,
-                textChoice2 = d.dialogs[i].textChoice2
+                textChoice1 = d.dialogs[i].choice1,
+                textChoice2 = d.dialogs[i].choice2,
+                chapterId = d.dialogs[i].chapterId,
             });
+             if (d.finalFile == null)
+               {
+                   finalFile = false;
+               }
+               else
+               {
+
+                   finalFile = (bool)d.finalFile;
+               }
+           } 
         }
+
+
+
+
+
+        void LoadImages(string characterPath, string backgroundPath)
+        {
+
+            Sprite characterSprite = Resources.Load<Sprite>(characterPath);
+            if (characterSprite != null)
+            {
+                spriteCharacter.sprite = characterSprite;
+            }
+            else
+            {
+                Debug.LogError("Impossible de charger l'image du chara");
+            }
+
+
+            Sprite backgroundSprite = Resources.Load<Sprite>(backgroundPath);
+            if (backgroundSprite != null)
+            {
+                spriteBackground.sprite = backgroundSprite;
+            }
+            else
+            {
+                Debug.LogError("Impossible de charger l'image du background");
+            }
+
+
+        }
+
+
+
+
     }
 
 
-
-
-
-    void LoadImages(string characterPath, string backgroundPath)
+    [System.Serializable]
+    public class Dialog
     {
-
-        Sprite characterSprite = Resources.Load<Sprite>(characterPath);
-        if (characterSprite != null)
-        {
-            spriteCharacter.sprite = characterSprite;
-        }
-        else
-        {
-            Debug.LogError("Impossible de charger l'image du chara");
-        }
-
-
-        Sprite backgroundSprite = Resources.Load<Sprite>(backgroundPath);
-        if (backgroundSprite != null)
-        {
-            spriteBackground.sprite = backgroundSprite;
-        }
-        else
-        {
-            Debug.LogError("Impossible de charger l'image du background");
-        }
-
-
+        public int id;
+        public string? name; //cacher le nom et les textes
+        public string dialog;
+        public string characterPath;
+        public string backgroundPath;
+        public string? choice1;
+        public string? choice2;
+        public bool savePoint;
+        public int chapterId;
     }
 
 
 
 
-}
+    [System.Serializable]
+    public class SavePoint
+    {
+        public int dialogId;
+        public int chapterId;
+    }
 
-
-[System.Serializable]
-public class Dialog
-{
-    public int id;
-    public string? name; //cacher le nom et les textes
-    public string dialog;
-    public string characterPath;
-    public string backgroundPath;
-    public string? textChoice1;
-    public string? textChoice2;
-    public bool savePoint;
-    public bool finalFile;
-}
-
-
-[System.Serializable]
-public class SavePoint
-{
-    public int dialogId;
-}
