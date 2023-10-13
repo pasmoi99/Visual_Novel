@@ -30,5 +30,10 @@
       "savePoint": true,
       "chapterId" : 1
     }
-  ]
+  ],
+
+  "finalFile": false,
+  "nextChara":0
+
+
 }

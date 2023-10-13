@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "A",
-      "dialog": "chap3.1",
+      "dialog": "chap4.1",
       "characterPath": "Acteur",
       "backgroundPath": "Futon_Room",
       "savePoint": false,
@@ -12,7 +12,7 @@
     {
       "id": 2,
       "name": "Yumi",
-      "dialog": "chap3.2",
+      "dialog": "chap4.2",
       "characterPath": "Tatsuo",
       "backgroundPath": "Apartment_Exterior",
       "savePoint": false,
@@ -21,7 +21,7 @@
     {
       "id": 3,
       "name": "Yumi",
-      "dialog": "chap3.3",
+      "dialog": "chap4.3",
       "characterPath": "Acteur",
       "backgroundPath": "Apartment_Exterior",
       "savePoint": false,
@@ -30,7 +30,9 @@
   ],
 
   
-  "finalFile": true
+  "finalFile": true,
+  "nextChara": 1
+
 
 
 

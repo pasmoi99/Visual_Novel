@@ -3,31 +3,37 @@
     {
       "id": 1,
       "name": "A",
-      "dialog": "chap3.1",
+      "dialog": "aneko.1",
       "characterPath": "Acteur",
       "backgroundPath": "Futon_Room",
       "savePoint": false,
-      "chapterId" : 3
+      "chapterId" : 1
     },
     {
       "id": 2,
       "name": "Yumi",
-      "dialog": "chap3.2",
+      "dialog": "aneko.2",
       "characterPath": "Tatsuo",
       "backgroundPath": "Apartment_Exterior",
       "savePoint": false,
-      "chapterId" : 3
+      "chapterId" : 1
     },
     {
       "id": 3,
       "name": "Yumi",
-      "dialog": "chap3.3",
+      "dialog": "chaneko.3",
       "characterPath": "Acteur",
       "backgroundPath": "Apartment_Exterior",
       "savePoint": false,
-      "chapterId" : 3
+      "chapterId" : 1
     }
-  ]
+  ],
+
+  
+  "finalFile": true,
+  "nextChara": 1
+
+
 
 
 
