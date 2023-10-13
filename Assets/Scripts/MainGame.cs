@@ -72,9 +72,9 @@ public class MainGame : MonoBehaviour
         SelectNextFile(chapterCount);
 
         //si dialogId dans le Json de sauvegarde n'a pas été modifié, alors on commence normalement 
-        if (savePoint.dialogId == 0)
+        if (savePoint.dialogId == 0 && savePoint.chapterId == 0)
         { 
-            //   SelectNextFile(chapterCount);
+            // SelectNextFile(chapterCount);
             UpdateDialogSequence(dialogsList[0]);
             //charger images 
             LoadImages(dialogsList[_sequenceNumber].characterPath, dialogsList[_sequenceNumber].backgroundPath);
@@ -95,17 +95,14 @@ public class MainGame : MonoBehaviour
             goToSavePoint.gameObject.SetActive(true);
             buttonGoToBeginning.gameObject.SetActive(true);
             buttonGoToSavePoint.gameObject.SetActive(true);
-
-
-
-
         }
-
+       
         buttonGoToBeginning.onClick.AddListener(OnClickGoToBeginning);
         buttonGoToSavePoint.onClick.AddListener(OnClickGoToSavePoint);
 
-        _sequenceNumber = savePoint.dialogId;//test
-        chapterCount = savePoint.chapterId; //test
+        //_sequenceNumber = savePoint.dialogId;//test
+        //chapterCount = savePoint.chapterId; //test 
+
 
         choice1.onClick.AddListener(() => { Choice(1); });
         choice2.onClick.AddListener(() => { Choice(2); });
@@ -167,8 +164,6 @@ public class MainGame : MonoBehaviour
     }
     void OnClickGoToSavePoint()
     {
-        if (savePoint != null)
-        {
             chapterCount = savePoint.chapterId;
             _sequenceNumber = savePoint.dialogId;
             UpdateDialogSequence(dialogsList[_sequenceNumber]);
@@ -178,12 +173,12 @@ public class MainGame : MonoBehaviour
             goToSavePoint.gameObject.SetActive(false);
             buttonGoToBeginning.gameObject.SetActive(false);
             buttonGoToSavePoint.gameObject.SetActive(false);
-        }
+        
     }
 
     void OnClickGoToBeginning()
     {
-        chapterCount = 1;
+        chapterCount = 0;
         _sequenceNumber = 0;
         UpdateDialogSequence(dialogsList[0]);
         buttonNext.gameObject.SetActive(true);
@@ -247,15 +242,12 @@ public class MainGame : MonoBehaviour
             if (finalFile == true)
             {
                 SetChoiceButtons(false);
-                goToSavePointBox.gameObject.SetActive(true); //test
+               /* goToSavePointBox.gameObject.SetActive(true); //test
                 goToSavePoint.gameObject.SetActive(true);//test
                 buttonGoToBeginning.gameObject.SetActive(true);//test
-                buttonGoToSavePoint.gameObject.SetActive(true);//test 
+                buttonGoToSavePoint.gameObject.SetActive(true);//test */
             }
-            else
-            {
-                Debug.LogError("erreur chargement");
-            }
+            
         }
 
 
