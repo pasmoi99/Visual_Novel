@@ -71,8 +71,12 @@ public class MainGame : MonoBehaviour
 
         SelectNextFile(chapterCount);
 
-        //si dialogId dans le Json de sauvegarde n'a pas été modifié, alors on commence normalement 
+
+        //si dialogId dans le Json de sauvegarde n'a pas ï¿½tï¿½ modifiï¿½, alors on commence normalement 
         if (savePoint.dialogId == 0 && savePoint.chapterId == 0)
+
+        //si dialogId dans le Json de sauvegarde n'a pas ï¿½tï¿½ modifiï¿½, alors on commence normalement 
+       
         { 
             // SelectNextFile(chapterCount);
             UpdateDialogSequence(dialogsList[0]);
@@ -80,7 +84,7 @@ public class MainGame : MonoBehaviour
             LoadImages(dialogsList[_sequenceNumber].characterPath, dialogsList[_sequenceNumber].backgroundPath);
         }
 
-        //sinon, on demande à l'utilisateur a partir de quel point il veut recomencer
+        //sinon, on demande ï¿½ l'utilisateur a partir de quel point il veut recomencer
         else
         {
             buttonNext.gameObject.SetActive(false);
@@ -146,7 +150,7 @@ public class MainGame : MonoBehaviour
     }
 
 
-    // permet de selectionner le passage du jeu qui va etre joué
+    // permet de selectionner le passage du jeu qui va etre jouï¿½
     void SelectNextFile(int chapter)
     {
         chapterProgress = chapter;
@@ -255,6 +259,7 @@ public class MainGame : MonoBehaviour
         {
             UpdateDialogSequence(dialogsList[_sequenceNumber]);
         }
+
 
 
 
