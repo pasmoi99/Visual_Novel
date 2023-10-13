@@ -7,8 +7,8 @@
       "dialog": "chap1.1",
       "characterPath": "Acteur",
       "backgroundPath": "Apartment_Exterior",
-      "savePoint": false
-     
+      "savePoint": false,
+     "chapterId" : 1
     },
     {
       "id": 2,
@@ -16,7 +16,8 @@
       "dialog" : "chap1.2",
       "characterPath": "Tatsuo",
       "backgroundPath": "Futon_Room",
-      "savePoint": false
+      "savePoint": false,
+      "chapterId" : 1
     },
     {
       "id": 3,
@@ -26,9 +27,9 @@
       "backgroundPath": "Futon_Room",
       "choice1": "aller dans la cuisine",
       "choice2": "aller dans le couloir",
-      "savePoint": true
+      "savePoint": true,
+      "chapterId" : 1
     }
   ],
-
   "finalFile": false
 }
