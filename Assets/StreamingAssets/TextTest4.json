@@ -7,7 +7,7 @@
       "characterPath": "Acteur",
       "backgroundPath": "Futon_Room",
       "savePoint": false,
-      "chapterId" : 3
+      "chapterId" : 4
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "characterPath": "Tatsuo",
       "backgroundPath": "Apartment_Exterior",
       "savePoint": false,
-      "chapterId" : 3
+      "chapterId" : 4
     },
     {
       "id": 3,
@@ -25,9 +25,13 @@
       "characterPath": "Acteur",
       "backgroundPath": "Apartment_Exterior",
       "savePoint": false,
-      "chapterId" : 3
+      "chapterId" : 4
     }
-  ]
+  ],
+
+  
+  "finalFile": true
+
 
 
 

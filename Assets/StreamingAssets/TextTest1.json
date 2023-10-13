@@ -4,7 +4,7 @@
     {
       "id": 1,
       "name": "A",
-      "dialog": "chap1.1",
+      "dialog": "chap1.1 je suis épatée par votre travail",
       "characterPath": "Acteur",
       "backgroundPath": "Apartment_Exterior",
       "savePoint": false,
@@ -30,6 +30,5 @@
       "savePoint": true,
       "chapterId" : 1
     }
-  ],
-  "finalFile": false
+  ]
 }
