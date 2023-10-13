@@ -3122,6 +3122,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3278965782298298582, guid: 7d5482233aea68e499beffc77e955e69, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: af051f69f275f7244b55649faeac64d5, type: 2}
+    - target: {fileID: 3278965782298298582, guid: 7d5482233aea68e499beffc77e955e69, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2534911717544624195, guid: af051f69f275f7244b55649faeac64d5, type: 2}
+    - target: {fileID: 3278965782298298582, guid: 7d5482233aea68e499beffc77e955e69, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4304357274222161871, guid: 7d5482233aea68e499beffc77e955e69, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
