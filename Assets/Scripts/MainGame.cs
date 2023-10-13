@@ -51,6 +51,7 @@ public class MainGame : MonoBehaviour
     private bool isFinalFile;
     private string[] perso = { "Yumi","Aneko" };
     private int currentChara=0;
+    private int multiplier=1;
 
     //cache les bouttons de choix du moment on l'on reprends
     private void Awake()
@@ -110,14 +111,14 @@ public class MainGame : MonoBehaviour
     {
         if (v == 1)
         {
-            chapterCount++;
+            chapterCount= (chapterCount+1) * multiplier;
         }
 
         if (v == 2)
         {
-            chapterCount += 2;
+            chapterCount = (chapterCount+2)*multiplier;
         }
-
+        multiplier++;
         SelectNextFile(chapterCount, perso[currentChara]);
         SetChoiceButtons(false);
         buttonNext.gameObject.SetActive(true);
