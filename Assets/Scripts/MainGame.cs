@@ -219,6 +219,7 @@ public class MainGame : MonoBehaviour
         }
         else
         {
+            _sequenceNumber = 0;
             SelectNextFile(chapterCount);
         }
        
