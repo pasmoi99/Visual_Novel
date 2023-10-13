@@ -1,0 +1,56 @@
+{
+  "dialogs":
+  [
+    {
+      "id": 1,
+      "name": "Tastuo",
+      "dialog": "Raaah ce rôle d'acteur m'ennuie !! Il me faut quelque chose de plus intéressant !!",
+      "characterPath": "Tastuo",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 2,
+      "name": "Tatsuo",
+      "dialog": "J'ai envie de tuer !! Je sais, je vais piéger celui-là !",
+      "characterPath": "Tastuo",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 3,
+      "name": "",
+      "dialog": "Sur le chemin, Tatsuo attrape le chef d'orchestre pour le tuer et par la suite prendre son visage",
+      "characterPath": "",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 4,
+      "name": "",
+      "dialog": "Il hurte quelqu'un en marchant",
+      "characterPath": "",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 5,
+      "name": "Tatsuo",
+      "dialog": "OOOh",
+      "characterPath": "CDO_Colere",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 6,
+      "name": "Metteur en scène",
+      "dialog": "Ah, vous voilà enfin ! Mais où étiez vous passé ? Cela fait un moment que l'on vous cherche ! A cause de vous on a dû mettre en pause la scène !",
+      "characterPath": "MES",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    }
+    
+    
+  ]
+
+}
