@@ -256,7 +256,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 763.3, y: -411.7}
-  m_SizeDelta: {x: 827.3, y: 166.9934}
+  m_SizeDelta: {x: 827.3, y: 170.07}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &310078894
 MonoBehaviour:
@@ -307,11 +307,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 38
+  m_fontSize: 19.2
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 38
+  m_fontSizeMin: 16
   m_fontSizeMax: 50
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -343,7 +343,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -0.00036621094, w: 2.788391}
+  m_margin: {x: 0, y: 0, z: -0.00036621094, w: 36.84482}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2083,6 +2083,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7811352427899238683, guid: f36aaa4bfe40ea44889ce919d45b93a9, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7811352427899238683, guid: f36aaa4bfe40ea44889ce919d45b93a9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 290b24406c0f98440b3394559818f13c, type: 3}
     - target: {fileID: 8016836799819334275, guid: f36aaa4bfe40ea44889ce919d45b93a9, type: 3}
       propertyPath: m_text
       value: blablabla
@@ -2293,6 +2301,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6180340824462553317, guid: 57ccbf43268d0f2439310cd9fa1ea426, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6180340824462553317, guid: 57ccbf43268d0f2439310cd9fa1ea426, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 290b24406c0f98440b3394559818f13c, type: 3}
     - target: {fileID: 7728336949157782808, guid: 57ccbf43268d0f2439310cd9fa1ea426, type: 3}
       propertyPath: m_text
       value: bouboubou

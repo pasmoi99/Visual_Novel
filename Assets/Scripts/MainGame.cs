@@ -49,7 +49,7 @@ public class MainGame : MonoBehaviour
     private int chapterProgress = 0;
 
     private bool isFinalFile;
-    private string[] perso = { "Yumi","Aneko" };
+    private string[] perso = { "Tatsuo"};
     private int currentChara=0;
     private int multiplier=1;
 
