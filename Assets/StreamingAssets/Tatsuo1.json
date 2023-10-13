@@ -1,0 +1,53 @@
+{
+  "dialogs":
+  [
+    {
+      "id": 1,
+      "name": "Kagami",
+      "dialog": "Bonjour à tous, nous n'allons pas perdre de temps en présentation. Si je vous ai sélectionné et réunis ici, c'est parce que je sais que vous êtes les meilleurs",
+      "characterPath": "Kagami_Neutre",
+      "backgroundPath": "BGBase",
+      "savePoint": false
+    },
+    {
+      "id" : 2,
+      "name" : "Kagami",
+      "dialog" : "Et nous allons commettre un coup d'état. Vous l'aurez deviné, nous allons tuer l'empereur Go-Komatsu, enfin l'un de vous. C'est cette personne qui empochera la récompense.",
+      "characterPath" : "Kagami_Neutre",
+      "backgroundPath": "BGBase",
+      "savePoint": false
+    },
+    {
+      "id" : 3,
+      "name" : "Kagami",
+      "dialog" : "Je veux le plus de discrétion possible, pas de questions. Et voici vos masques pour infiltrer le théâtre, lieu où se déroulera la mission. Aneko, tu seras un musicien, Kumo un garde et toi Tatsuo un acteur. Bonne chance.",
+      "characterPath" : "Kagami_Neutre",
+      "backgroundPath": "BGBase",
+      "savePoint": false
+    },
+    {
+      "id" : 4,
+      "name" : "Tatsuo",
+      "dialog" : "Pas besoin de chance, seule la force de mes poings comptent !!.",
+      "characterPath" : "Tatsuo",
+      "backgroundPath": "BGBase",
+      "savePoint": false
+    },
+    {
+      "id" : 5,
+      "name" : "Kumo",
+      "dialog" : "Que mon dieu m'assiste et me guide dans cette mission.",
+      "characterPath" : "Kumo",
+      "backgroundPath": "BGBase",
+      "savePoint": false
+    },
+    {
+      "id" : 6,
+      "name" : "Aneko",
+      "dialog" : "Hmmm, enfin une occasion de pouvoir quitter cette vie !",
+      "characterPath" : "Aneko",
+      "backgroundPath": "BGBase",
+      "savePoint": true
+    }
+  ]
+}
