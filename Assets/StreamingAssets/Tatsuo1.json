@@ -47,6 +47,7 @@
       "dialog": "Ah, vous voilà enfin ! Mais où étiez vous passé ? Cela fait un moment que l'on vous cherche ! A cause de vous on a dû mettre en pause la scène !",
       "characterPath": "MES",
       "backgroundPath": "BGTemple",
+<<<<<<< Updated upstream
       "savePoint": false,
       "choice1":"S'excuser et se remettre en place",
       "choice2":"L'ignorer"
@@ -57,4 +58,17 @@
   "nextFile1" : "-1",
   "nextFile2" : "1-"
 
+=======
+      "savePoint": true,
+      "choice1":  "aller dans  la cuisine",
+      "choice2": "aller dans le couloir"
+      
+    }
+  ],
+  "finalFile" : false,
+  "nextChara": 0,
+  "nextFile1" : "Tatsuo2",
+  "nextFile2" : "Tatsuo3",
+  "chapterId": "Tatsuo1"
+>>>>>>> Stashed changes
 }

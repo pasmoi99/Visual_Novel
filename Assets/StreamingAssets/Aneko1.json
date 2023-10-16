@@ -3,6 +3,7 @@
   [
     {
       "id": 1,
+<<<<<<< Updated upstream
       "name": "",
       "dialog": "La scène se coupe brusquement pour cause inconnue",
       "characterPath": "Musicien",
@@ -43,6 +44,29 @@
       "choice1" : "aller se renseigner sur les lieux",
       "choice2" : "profiter de la pagaille pour changer d'apparence"
 
+=======
+      "name": "A",
+      "dialog": "aneko.1",
+      "characterPath": "Acteur",
+      "backgroundPath": "Futon_Room",
+      "savePoint": false
+    },
+    {
+      "id": 2,
+      "name": "Yumi",
+      "dialog": "aneko.2",
+      "characterPath": "Tatsuo",
+      "backgroundPath": "Apartment_Exterior",
+      "savePoint": false
+    },
+    {
+      "id": 3,
+      "name": "Yumi",
+      "dialog": "chaneko.3",
+      "characterPath": "Acteur",
+      "backgroundPath": "Apartment_Exterior",
+      "savePoint": false
+>>>>>>> Stashed changes
     }
   ],
   "finalFile" : false,
@@ -50,4 +74,14 @@
   "nextFile1" : "aneko2",
   "nextFile2" : "aneko3"
   
+<<<<<<< Updated upstream
+=======
+  "finalFile": true,
+  "nextChara": -1,
+  "chapterId": "Aneko1"
+
+
+
+
+>>>>>>> Stashed changes
 }
