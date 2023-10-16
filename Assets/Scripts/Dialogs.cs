@@ -6,5 +6,5 @@ public class Dialogs
     public string nextFile1;
     public string nextFile2;
     public int nextChara;
-    public int chapterId;
+    public string chapterId;
 }

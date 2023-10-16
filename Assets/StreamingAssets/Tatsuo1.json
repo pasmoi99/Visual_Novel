@@ -47,6 +47,7 @@
       "dialog": "Ah, vous voilà enfin ! Mais où étiez vous passé ? Cela fait un moment que l'on vous cherche ! A cause de vous on a dû mettre en pause la scène !",
       "characterPath": "MES",
       "backgroundPath": "BGTemple",
+
       "savePoint": false,
       "choice1":"S'excuser et se remettre en place",
       "choice2":"L'ignorer"
@@ -55,6 +56,7 @@
   "finalFiles" : false,
   "nextChara" : 1,
   "nextFile1" : "-1",
-  "nextFile2" : "1-"
-
+  "nextFile2" : "1-",
+  "chapterId": "Tatsuo1"
 }
+

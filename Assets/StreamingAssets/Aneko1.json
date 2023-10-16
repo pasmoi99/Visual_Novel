@@ -43,11 +43,15 @@
       "choice1" : "aller se renseigner sur les lieux",
       "choice2" : "profiter de la pagaille pour changer d'apparence"
 
+
     }
   ],
   "finalFile" : false,
   "nextChara" : -1,
   "nextFile1" : "aneko2",
-  "nextFile2" : "aneko3"
-  
+  "nextFile2" : "aneko3",
+  "chapterId": "Aneko1"
+
 }
+
+

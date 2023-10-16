@@ -54,9 +54,17 @@
     
     
   ],
+<<<<<<< Updated upstream:Assets/StreamingAssets/-1.json
   "finalFiles" : false,
   "nextChara" : 1,
   "nextFile1" : "-1bis",
   "nextFile2" : "-1bis-"
+=======
+
+
+  "finalFile": true,
+  "nextChara": 1,
+  "chapterId": "Tatsuo2"
+>>>>>>> Stashed changes:Assets/StreamingAssets/Tatsuo2.json
 
 }

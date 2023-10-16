@@ -101,9 +101,16 @@
 
 
   ],
+<<<<<<< Updated upstream:Assets/StreamingAssets/1-.json
   "finalFiles" : false,
   "nextChara" : 1,
   "nextFile1" : "Tatsuo2bisbis",
   "nextFile2" : "Tatsuo2bis"
+=======
+
+  "finalFile":true,
+  "nextChara": 1,
+  "chapterId": "Tatsuo3"
+>>>>>>> Stashed changes:Assets/StreamingAssets/Tatsuo3.json
 
 }

@@ -23,6 +23,7 @@ public class MainGame : MonoBehaviour
     public Image goToSavePointBox;
     public Button buttonGoToBeginning;
     public Button buttonGoToSavePoint;
+    public Image bgBlack;
 
     private string jFile; //variable pour lire le fichier json
     private string jPath; //variable du chemin vers le fichier json
@@ -47,16 +48,20 @@ public class MainGame : MonoBehaviour
 
     private string previousChapter;
     private int chapterProgress = 1;
-    private int chapterCount = 1;
+    private int fileCount = 1;
 
     private bool isFinalFile;
-    private string[] perso = { "Tatsuo" };
+    private string[] perso = { "Tatsuo1", "Aneko1" };
+    private string nextFileName;
     private int currentChara = 0;
     //private int multiplier=1;
 
     //cache les bouttons de choix du moment on l'on reprends
     private void Awake()
     {
+
+        savePoint = new SavePoint();
+
         buttonGoToBeginning.onClick.AddListener(OnClickGoToBeginning);
         buttonGoToSavePoint.onClick.AddListener(OnClickGoToSavePoint);
         choice1.gameObject.SetActive(false);
@@ -69,6 +74,9 @@ public class MainGame : MonoBehaviour
 
 
         jSavePath = Application.streamingAssetsPath + "/SavePoint.json"; //chemin fichier JSON des sauvegardes
+        savePoint.chapterId = "Tatsuo1";
+        savePoint.dialogId = 0;
+        File.WriteAllText(jSavePath, JsonUtility.ToJson(savePoint));
 
         jSaveFile = File.ReadAllText(jSavePath); //lecture du fichier JSON des sauvegardes et stockage dans jSaveFile
 
@@ -78,23 +86,17 @@ public class MainGame : MonoBehaviour
 
 
         //si dialogId dans le Json de sauvegarde n'a pas �t� modifi�, alors on commence normalement 
-        if (savePoint.dialogId == 0 || savePoint.chapterId == 0)
 
         //si dialogId dans le Json de sauvegarde n'a pas �t� modifi�, alors on commence normalement 
 
-        {
-            // SelectNextFile(chapterCount);
-            UpdateDialogSequence(dialogsList[0]);
-            //charger images 
-            LoadImages(dialogsList[sequenceNumber].characterPath, dialogsList[sequenceNumber].backgroundPath);
-        }
+
+        // SelectNextFile(chapterCount);
+        UpdateDialogSequence(dialogsList[0]);
+        //charger images 
+        LoadImages(dialogsList[sequenceNumber].characterPath, dialogsList[sequenceNumber].backgroundPath);
+
 
         //sinon, on demande � l'utilisateur a partir de quel point il veut recomencer
-        else
-        {
-
-            SetSaveChoice(true);
-        }
 
 
 
@@ -112,15 +114,18 @@ public class MainGame : MonoBehaviour
     {
         if (value == 1)
         {
-            //chapterCount= (chapterCount+1) * multiplier;
+            nextFileName = jDialogs.nextFile1;
+
         }
 
         if (value == 2)
         {
-            //chapterCount = (chapterCount+2)*multiplier;
+            nextFileName = jDialogs.nextFile2;
+
         }
-        //multiplier++;
-        SelectNextFile(perso[currentChara]);
+
+
+        SelectNextFile(nextFileName);
         SetChoiceButtons(false);
         buttonNext.gameObject.SetActive(true);
         sequenceNumber = 0;
@@ -145,9 +150,9 @@ public class MainGame : MonoBehaviour
 
 
     // permet de selectionner le passage du jeu qui va etre jou�
-    void SelectNextFile(string perso)
-    { 
-        jPath = Application.streamingAssetsPath + "/" + perso + chapterCount + ".json"; //chemin fichier JSON des dialogues
+    void SelectNextFile(string name)
+    {
+        jPath = Application.streamingAssetsPath + "/" + name + ".json"; //chemin fichier JSON des dialogues
 
         jFile = File.ReadAllText(jPath); //lecture du fichier JSON des dialogues et stockage dans jFile
 
@@ -164,17 +169,22 @@ public class MainGame : MonoBehaviour
     {
         //chapterCount = savePoint.chapterId;
         sequenceNumber = savePoint.dialogId;
-        SelectNextFile(perso[currentChara]);
-
-        UpdateDialogSequence(dialogsList[sequenceNumber]);
+        SelectNextFile(savePoint.chapterId);
+        savePoint.chapterId = "Tatsuo1";
+        savePoint.dialogId = 0;
+        UpdateDialogSequence(dialogsList[sequenceNumber -1]);
         SetSaveChoice(false);
 
     }
 
     void OnClickGoToBeginning()
     {
+
         //chapterCount = 0;
         sequenceNumber = 0;
+        SelectNextFile(perso[0]);
+        savePoint.chapterId = "Tatsuo1";
+        savePoint.dialogId = 0;
         UpdateDialogSequence(dialogsList[0]);
         SetSaveChoice(false);
     }
@@ -215,20 +225,24 @@ public class MainGame : MonoBehaviour
     //permet de passer au dialogue suivant
     public void OnClickNextDialog()
     {
-        sequenceNumber++;
-
+        if (sequenceNumber < dialogsList.Count)
+        {
+            CheckAndSetSavePoint(dialogsList[sequenceNumber], jDialogs);
+            sequenceNumber++;
+        }
+        
         if (sequenceNumber == dialogsList.Count)
         {
             buttonNext.gameObject.SetActive(false);
 
             SetChoiceButtons(true);//test
-            chapterCount++;
+            fileCount++;
 
             if (isFinalFile == true)
             {
                 SetChoiceButtons(false);
                 SetSaveChoice(true);
-                chapterCount = savePoint.chapterId;
+                //fileCount = savePoint.chapterId;
 
             }
             if (jDialogs.nextChara == -1 && sequenceNumber == dialogsList.Count)
@@ -237,17 +251,17 @@ public class MainGame : MonoBehaviour
                 SceneManager.LoadScene("MainMenu");
             }
 
-            else if (currentChara != jDialogs.nextChara)
-            {
-                currentChara = jDialogs.nextChara;
-                SetSaveChoice(false);
-                sequenceNumber = 0;
-                // chapterCount = 1;
-                SelectNextFile(perso[currentChara]);
-                UpdateDialogSequence(dialogsList[0]);
+            //else if (currentChara != jDialogs.nextChara && jDialogs.nextChara!=-1)
+            //{
+            //    currentChara = jDialogs.nextChara;
+            //    SetSaveChoice(false);
+            //    sequenceNumber = 0;
+            //    // chapterCount = 1;
+            //    SelectNextFile(nextFileName);
+            //    UpdateDialogSequence(dialogsList[0]);
 
 
-            }
+            //}
 
 
 
@@ -267,10 +281,11 @@ public class MainGame : MonoBehaviour
 
     public void SetSaveChoice(bool active)
     {
-        goToSavePointBox.gameObject.SetActive(active); //test
-        goToSavePoint.gameObject.SetActive(active);//test
-        buttonGoToBeginning.gameObject.SetActive(active);//test
-        buttonGoToSavePoint.gameObject.SetActive(active);//test 
+        bgBlack.gameObject.SetActive(active);
+        goToSavePointBox.gameObject.SetActive(active);
+        goToSavePoint.gameObject.SetActive(active);
+        buttonGoToBeginning.gameObject.SetActive(active);
+        buttonGoToSavePoint.gameObject.SetActive(active);
         buttonNext.gameObject.SetActive(!active);
         textBox.gameObject.SetActive(!active);
         textDialog.gameObject.SetActive(!active);
@@ -289,17 +304,18 @@ public class MainGame : MonoBehaviour
         choice2.gameObject.SetActive(active);
     }
 
-    public void CheckAndSetSavePoint(DialogSequence dialSeq,Dialogs dials)
+    public void CheckAndSetSavePoint(DialogSequence dialSeq, Dialogs dials)
     {
         if (dialSeq.savePoint == true)
-        {   
+        {
             savePoint.dialogId = dialSeq.id;
             savePoint.chapterId = dials.chapterId;
             File.WriteAllText(jSavePath, JsonUtility.ToJson(savePoint));//test
-                                                                        // JsonUtility.ToJson(savePoint);
+  
 
 
         }
+
     }
 
     // met les dialogues dans la liste de type DialogSequence
@@ -317,6 +333,7 @@ public class MainGame : MonoBehaviour
                 backgroundPath = dials.dialogs[i].backgroundPath,
                 textChoice1 = dials.dialogs[i].choice1,
                 textChoice2 = dials.dialogs[i].choice2,
+                savePoint = dials.dialogs[i].savePoint,
             });
 
         }
@@ -345,10 +362,12 @@ public class MainGame : MonoBehaviour
         Sprite characterSprite = Resources.Load<Sprite>(characterPath);
         if (characterSprite != null)
         {
+            spriteCharacter.gameObject.SetActive(true);
             spriteCharacter.sprite = characterSprite;
         }
         else
         {
+            spriteCharacter.gameObject.SetActive(false);
             Debug.LogError("Impossible de charger l'image du chara");
         }
 
@@ -392,6 +411,6 @@ public class Dialog
 public class SavePoint
 {
     public int dialogId;
-    public int chapterId;
+    public string chapterId;
 }
 
