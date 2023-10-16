@@ -1,0 +1,88 @@
+{
+  "dialogs":
+  [
+    {
+      "id": 1,
+      "name": "Kagami",
+      "dialog": "Bonjour à tous, nous n'allons pas perdre de temps en présentation. Si je vous ai sélectionné et réunis ici, c'est parce que je sais que vous êtes les meilleurs",
+      "characterPath": "Kagami_Neutre",
+      "backgroundPath": "BGBase",
+      "savePoint": false
+    },
+    {
+      "id" : 2,
+      "name" : "Kagami",
+      "dialog" : "Et nous allons commettre un coup d'état. Vous l'aurez deviné, nous allons tuer l'empereur Go-Komatsu, enfin l'un de vous. C'est cette personne qui empochera la récompense.",
+      "characterPath" : "Kagami_Neutre",
+      "backgroundPath": "BGBase",
+      "savePoint": false
+    },
+    {
+      "id" : 3,
+      "name" : "Kagami",
+      "dialog" : "Je veux le plus de discrétion possible, pas de questions. Et voici vos masques pour infiltrer le théâtre, lieu où se déroulera la mission. Aneko, tu seras un musicien, Kumo un garde et toi Tatsuo un acteur. Bonne chance.",
+      "characterPath" : "Kagami_Neutre",
+      "backgroundPath": "BGBase",
+      "savePoint": false
+    },
+    {
+      "id" : 4,
+      "name" : "Aneko",
+      "dialog" : "Quand je dois tuer, je veux toujours savoir pour quelle raison je le fais.",
+      "characterPath" : "Aneko",
+      "backgroundPath": "BGBase",
+      "savePoint": false
+    },
+    {
+      "id" : 5,
+      "name" : "Kagami",
+      "dialog" : "Vous n'avez pas besoin de le savoir. Contentez vous simplement de suivre les ordres.",
+      "characterPath" : "Kagami_Neutre",
+      "backgroundPath": "BGBase",
+      "savePoint": false
+    },
+    {
+      "id" : 6,
+      "name" : "Tatsuo",
+      "dialog" : "Ecoute moi bien mon grand, je ne sais pas dans quel monde tu as pensé que tu pouvais t'adresser à nous de cette manière mais tu vas baisser d'un ton.",
+      "characterPath" : "Tatsuo",
+      "backgroundPath": "BGBase",
+      "savePoint": false
+    },
+    {
+      "id" : 7,
+      "name" : "Kagami",
+      "dialog" : "Je suis celui qui vous a engagé !! Faites votre mission et vous serez grassement payés, c'est tout.",
+      "characterPath" : "Kagami_Colere",
+      "backgroundPath": "BGBase",
+      "savePoint": false
+    },
+    {
+      "id" : 8,
+      "name" : "Kumo",
+      "dialog" : "Tant que je suis payé pour satisfaire mon Dieu cela me va. Allons-y !",
+      "characterPath" : "Kumo",
+      "backgroundPath": "BGBase",
+      "savePoint": false
+    },
+    {
+      "id" : 9,
+      "name" : "Aneko",
+      "dialog" : "Vous avez intérêt à honorer votre parole sinon je vous retrouve pour vous étriper.",
+      "characterPath" : "Aneko",
+      "backgroundPath": "BGBase",
+      "savePoint": false
+    },
+    {
+      "id" : 10,
+      "name" : "Tatsuo",
+      "dialog" : "Et moi vous exploser la boite cranienne ! ",
+      "characterPath" : "Tatsuo",
+      "backgroundPath": "BGBase",
+      "savePoint": true
+    }
+  ],
+  "finalFile" : false,
+  "nextChara" : 1,
+  "nextFile1" : "Kumo1"
+}

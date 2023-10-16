@@ -1,0 +1,150 @@
+{
+  "dialogs":
+  [
+    {
+      "id": 1,
+      "name": "Kagami",
+      "dialog": "Bonjour à tous, nous n'allons pas perdre de temps en présentation. Si je vous ai sélectionné et réunis ici, c'est parce que je sais que vous êtes les meilleurs",
+      "characterPath": "Kagami_Neutre",
+      "backgroundPath": "BGBase",
+      "savePoint": false
+    },
+    {
+      "id" : 2,
+      "name" : "Kagami",
+      "dialog" : "Et nous allons commettre un coup d'état. Vous l'aurez deviné, nous allons tuer l'empereur Go-Komatsu, enfin l'un de vous. C'est cette personne qui empochera la récompense.",
+      "characterPath" : "Kagami_Neutre",
+      "backgroundPath": "BGBase",
+      "savePoint": false
+    },
+    {
+      "id" : 3,
+      "name" : "Kagami",
+      "dialog" : "Je veux le plus de discrétion possible, pas de questions. Et voici vos masques pour infiltrer le théâtre, lieu où se déroulera la mission. Aneko, tu seras un musicien, Kumo un garde et toi Tatsuo un acteur. Bonne chance.",
+      "characterPath" : "Kagami_Neutre",
+      "backgroundPath": "BGBase",
+      "savePoint": false
+    },
+    {
+      "id" : 4,
+      "name" : "Aneko",
+      "dialog" : "Quand je dois tuer, je veux toujours savoir pour quelle raison je le fais.",
+      "characterPath" : "Aneko",
+      "backgroundPath": "BGBase",
+      "savePoint": false
+    },
+    {
+      "id" : 5,
+      "name" : "Kagami",
+      "dialog" : "Vous n'avez pas besoin de le savoir. Contentez vous simplement de suivre les ordres.",
+      "characterPath" : "Kagami_Neutre",
+      "backgroundPath": "BGBase",
+      "savePoint": false
+    },
+    {
+      "id" : 6,
+      "name" : "Tatsuo",
+      "dialog" : "Ecoute moi bien mon grand, je ne sais pas dans quel monde tu as pensé que tu pouvais t'adresser à nous de cette manière mais tu vas baisser d'un ton.",
+      "characterPath" : "Tatsuo",
+      "backgroundPath": "BGBase",
+      "savePoint": false
+    },
+    {
+      "id" : 7,
+      "name" : "Kagami",
+      "dialog" : "Je suis celui qui vous a engagé !! Faites votre mission et vous serez grassement payés, c'est tout.",
+      "characterPath" : "Kagami_Colere",
+      "backgroundPath": "BGBase",
+      "savePoint": false
+    },
+    {
+      "id" : 8,
+      "name" : "Kumo",
+      "dialog" : "Tant que je suis payé pour satisfaire mon Dieu cela me va. Allons-y !",
+      "characterPath" : "Kumo",
+      "backgroundPath": "BGBase",
+      "savePoint": false
+    },
+    {
+      "id" : 9,
+      "name" : "Tatsuo",
+      "dialog" : "Non, cela ne va pas me suffire. En générale, je ne pose pas de questions mais là, vous ne m'aspirez pas confiance.",
+      "characterPath" : "Tatsuo",
+      "backgroundPath": "BGBase",
+      "savePoint": false
+    },
+    {
+      "id" : 10,
+      "name" : "Aneko",
+      "dialog" : "Justement Kumo ! Je refuse d'effectuer une mission où je ne suis même pas sûr d'être payée ! Pourquoi proposer la même mission à 3 assassins différents et offrir seulement une récompense ? ",
+      "characterPath" : "Aneko",
+      "backgroundPath": "BGBase",
+      "savePoint": false
+    },
+    {
+      "id" : 11,
+      "name" : "Kagami",
+      "dialog" : "Pour multiplier les chances de réussite pardi ! Et je ne vais pas offrir de récompenses aux gens qui ne remplissent par leurs objectifs !",
+      "characterPath" : "Kagami_Colere",
+      "backgroundPath": "BGBase",
+      "savePoint": false
+    },
+    {
+      "id" : 12,
+      "name" : "Tatsuo",
+      "dialog" : "Tu as raison Aneko, ça cache quelque chose de suspect. J'ai l'impression qu'il veut nous piégé.",
+      "characterPath" : "Tatsuo",
+      "backgroundPath": "BGBase",
+      "savePoint": false
+    },
+    {
+      "id" : 13,
+      "name" : "Kumo",
+      "dialog" : "Après mûre réfléxion, c'est vrai que cette situation n'est pas nette.",
+      "characterPath" : "Kumo",
+      "backgroundPath": "BGBase",
+      "savePoint": false
+    },
+    {
+      "id" : 14,
+      "name" : "Aneko",
+      "dialog" : "Vous ne voulez pas par hasard qu'on attire l'attention pour que vous ayez le champ libre pour vous même assassiner l'empereur ?",
+      "characterPath" : "Aneko",
+      "backgroundPath": "BGBase",
+      "savePoint": false
+    },
+    {
+      "id" : 15,
+      "name" : "Tatsuo",
+      "dialog" : "Quoi ? Mécréand, tu as osé nous piégé ? Je vais te tuer !",
+      "characterPath" : "Tatsuo",
+      "backgroundPath": "BGBase",
+      "savePoint": false
+    },
+    {
+      "id" : 16,
+      "name" : "Kagami",
+      "dialog" : "Non, arrêtte je peux vous expliquer !",
+      "characterPath" : "Kagami_Colere",
+      "backgroundPath": "BGBase",
+      "savePoint": false
+    },
+    {
+      "id" : 17,
+      "name" : "",
+      "dialog" : "Aneko, Tatsuo et Kumo s'attaquent à trois en même temps sur le Maître incapable de se défendre. Il meurt suite à ses blessures.",
+      "characterPath" : "",
+      "backgroundPath": "BGBase",
+      "savePoint": false
+    },
+    {
+      "id" : 18,
+      "name" : "",
+      "dialog" : "FELICITATIONS, VOUS AVEZ GAGNE !!!",
+      "characterPath" : "",
+      "backgroundPath": "",
+      "savePoint": true
+    }
+  ],
+  "finalFile" : true
+}
