@@ -1,0 +1,33 @@
+{
+    "dialogs":
+    [
+      {
+        "id": 1,
+        "name": "Aneko",
+        "dialog": "Je suis désolé mais je suis dans l'obligation de refuser. Ce plat ne m'est pas destiné. Et en prendre une bouchée gacherait l'expérience culinaire.",
+        "characterPath": "Cuisinier",
+        "backgroundPath": "BgLoge-Piece",
+        "savePoint": false
+      },
+      {
+        "id" : 2,
+        "name" : "Un garde",
+        "dialog" : "Comment ? C'est un ordre de l'empereur. Vous vous devez d'obéir. ",
+        "characterPath" : "Garde02",
+        "backgroundPath": "BgLoge-Piece",
+        "savePoint": false
+      },
+      {
+        "id" : 3,
+        "name" : "",
+        "dialog" : "Vous avez provoqué la colère du garde et de l'empereur. Vous vous faites donc emprisonné. Vous avez perdu !",
+        "characterPath" : "",
+        "backgroundPath": "",
+        "savePoint": false
+      } 
+    ],
+    "finalFile" : true,
+    "nextChara" : -1,
+    "nextFile1" : "",
+    "nextFile2" : ""
+  }

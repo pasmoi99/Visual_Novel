@@ -1,0 +1,33 @@
+{
+    "dialogs":
+    [
+      {
+        "id": 1,
+        "name": "Aneko",
+        "dialog": "Je ne vais certainement pas goûter cela avant de l'avoir fait vérifié. Elle n'a pas très appétissante.",
+        "characterPath": "Empereur_Dubitatif",
+        "backgroundPath": "BgLoge-Piece",
+        "savePoint": false
+      },
+      {
+        "id" : 2,
+        "name" : "Le serveur",
+        "dialog" : "Toutes mes excuses mon seigneur, je m'en vais directement chercher un subordonné qu'il goûte à votre place.",
+        "characterPath" : "Serveur",
+        "backgroundPath": "BgLoge-Piece",
+        "savePoint": false
+      },
+      {
+        "id" : 3,
+        "name" : "",
+        "dialog" : "Le subordonné meurt une fois le plat goûté. Le drame fait stopper la représentation et évacuer le théâtre. L'empereur est placé sous haute sécurité. La mission tombe à l'eau. Vous avez perdu !",
+        "characterPath" : "",
+        "backgroundPath": "",
+        "savePoint": false
+      }
+    ],
+    "finalFile" : true,
+    "nextChara" : -1,
+    "nextFile1" : "",
+    "nextFile2" : ""
+  }

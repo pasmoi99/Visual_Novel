@@ -1,0 +1,43 @@
+{
+    "dialogs":
+    [
+      {
+        "id": 1,
+        "name": "Aneko",
+        "dialog": "Je vais en profiter pour aller dans sa loge et profiter de mon nouveau statut.",
+        "characterPath": "Empereur_Neutre",
+        "backgroundPath": "BGCouloir1",
+        "savePoint": false
+      },
+      {
+        "id" : 6,
+        "name" : "",
+        "dialog" : "De retour à la loge, un autre serveur lui apporta ses plats et elle reconnut de suite le poison. le serveur s'étonne de le voir longtemps hésité. il lui demanda ce qu'il n'allait pas.",
+        "characterPath" : "",
+        "backgroundPath": "BgLoge-Piece",
+        "savePoint": false
+      },
+      {
+        "id" : 7,
+        "name" : "Aneko",
+        "dialog" : "Quelle erreur j'ai faite !! Je pensais que la nourriture était pour l'empereur ! Je me retrouve coincé dans mon propre piège. Il faut vite que je trouve une solution pour me sortir de là !",
+        "characterPath" : "Empereur_Dubitatif",
+        "backgroundPath": "BgLoge-Piece",
+        "savePoint": false
+      },
+      {
+        "id" : 8,
+        "name" : "Le serveur",
+        "dialog" : "Quelque chose ne va pas seigneur ? Je pensais que vous aviez faim ?",
+        "characterPath" : "Serveur",
+        "backgroundPath": "BgLoge-Piece",
+        "savePoint": true,
+      "choice1" : "Répondre qu'elle n'a finalement plus faim et qu'elle veut juste profiter du spectacle",
+      "choice2" : "Répondre que la nourriture a l'air avariée"
+    }
+  ],
+  "finalFile" : false,
+  "nextChara" : -1,
+  "nextFile1" : "aneko10",
+  "nextFile2" : "aneko11"
+}

@@ -1,0 +1,25 @@
+{
+    "dialogs":
+    [
+      {
+        "id": 1,
+        "name": "Aneko",
+        "dialog": "Non, il faut que je me concentre sur mon objectif principal.",
+        "characterPath": "Garde01",
+        "backgroundPath": "BgCouloir2",
+        "savePoint": false
+      },
+      {
+        "id" : 2,
+        "name" : "",
+        "dialog" : "Aneko l'assassine directement car sans intérêt. mais un serviteur la voit de l'autre côté du couloir et alerte les gardes. Les gardes rappliquent et Aneko finit en prison. Vous avez perdu.",
+        "characterPath" : "",
+        "backgroundPath": "",
+        "savePoint": false
+      }
+    ],
+    "finalFile" : true,
+    "nextChara" : -1,
+    "nextFile1" : "",
+    "nextFile2" : ""
+  }

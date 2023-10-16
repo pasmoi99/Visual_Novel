@@ -1,0 +1,115 @@
+{
+    "dialogs":
+    [
+      {
+        "id" : 1,
+        "name" : "Aneko",
+        "dialog" : "J'ai changé d'avis, je mangerai plus tard. Je voudrais juste profiter de la fin du spectacle.",
+        "characterPath" : "Empereur_Neutre",
+        "backgroundPath": "BgLoge-Piece",
+        "savePoint": false
+      },
+      {
+        "id" : 2,
+        "name" : "Le serveur",
+        "dialog" : "Comme vous vous voudrez mon seigneur.",
+        "characterPath" : "Serveur",
+        "backgroundPath": "BgLoge-Piece",
+        "savePoint": false
+      },
+      {
+        "id" : 3,
+        "name" : "Aneko",
+        "dialog" : "*pense* Mince, j'ai réussi à m'extirper de la situation mais je me retrouve coincé ici. Il faut que je trouve quelque chose pour bouger.",
+        "characterPath" : "Empereur_Neutre",
+        "backgroundPath": "BgLoge-Piece",
+        "savePoint": false
+      },
+      {
+        "id" : 4,
+        "name" : "Aneko",
+        "dialog" : "*pense*Ah mais bien sur ! Comment je n'ai pas pu y penser plus tôt ? Je vais simuler un malaise et prétextant la fatigue, je vais me retirer.",
+        "characterPath" : "Empereur_Neutre",
+        "backgroundPath": "BgLoge-Piece",
+        "savePoint": false
+      },
+      {
+        "id" : 5,
+        "name" : "",
+        "dialog" : "*Elle simule donc un malaise*",
+        "characterPath" : "Empereur_Malade",
+        "backgroundPath": "BgLoge-Piece",
+        "savePoint": false
+      },
+      {
+        "id" : 6,
+        "name" : "Le serveur",
+        "dialog" : "Mon seigneur !! Qu'est-ce qui vous arrive ?!?",
+        "characterPath" : "Serveur",
+        "backgroundPath": "BgLoge-Piece",
+        "savePoint": false
+      },
+      {
+        "id" : 7,
+        "name" : "Aneko",
+        "dialog" : "Ce n'est rien. Je me sens fatigué, je vais me retirer dans ma chambre pour me reposer. Que personne ne vienne me déranger.",
+        "characterPath" : "Empereur_Malade",
+        "backgroundPath": "BgLoge-Piece",
+        "savePoint": false
+      },
+      {
+        "id" : 8,
+        "name" : "",
+        "dialog" : "De retour dans le couloir pour accéder à sa chambre. Aneko recroise le chef de cuisine transportant des plats. Elle reconnut les plats et compris que les plats étaient pour les personnes de haut rang de manière général.",
+        "characterPath" : "",
+        "backgroundPath": "BGCouloir1",
+        "savePoint": false
+      },
+      {
+        "id" : 9,
+        "name" : "Aneko",
+        "dialog" : "*pense* Mais ce sont aussi des plats que j'avais empoisonné ? Ca y est, j'ai compris !",
+        "characterPath" : "Empereur_Dubitatif",
+        "backgroundPath": "BGCouloir1",
+        "savePoint": false
+      },
+      {
+        "id" : 10,
+        "name" : "Aneko",
+        "dialog" : "*pense* Les plats sont destinés à tout les seigneurs y compris l'empereur. Peut-être même que le chef de cuisine se dirige même vers la salle de l'empereur. Il faut que j'inspecte ça !",
+        "characterPath" : "Empereur_Dubitatif",
+        "backgroundPath": "BGCouloir1",
+        "savePoint": false
+      },
+      {
+        "id" : 11,
+        "name" : "",
+        "dialog" : "Aneko décide donc de tuer le chef de la cuisine pour lui prendre sa place. Elle aperçut sur le charriot l'invitation à la chambre royale. Elle s'y dirigea donc.",
+        "characterPath" : "",
+        "backgroundPath": "BGCouloir1",
+        "savePoint": false
+      },
+      {
+        "id" : 12,
+        "name" : "Le garde",
+        "dialog" : "Bienvenue cuisinier, goûtez donc le plat réservé pour notre empereur. Il faut être sûr qu'il soit sain pour lui.",
+        "characterPath" : "Garde01",
+        "backgroundPath": "BgLoge-Piece",
+        "savePoint": false
+      },
+      {
+        "id" : 13,
+        "name" : "Aneko",
+        "dialog" : "Stupide garde ! Je suis si proche du but. Je ne peux pas échouer maintenant. Jusqu'au bout des indésirables me feront obstacle. Tant pis je dois déjà éviter de mourir à cause du poison dans les plats.",
+        "characterPath" : "Cuisinier",
+        "backgroundPath": "BgLoge-Piece",
+        "savePoint": true,
+        "choice1" : "Refuser de goûter le plat",
+        "choice2" : "Inventer une allergie pour éviter de goûter"
+      }
+    ],
+    "finalFile" : false,
+    "nextChara" : -1,
+    "nextFile1" : "aneko12",
+    "nextFile2" : "aneko13"
+  }

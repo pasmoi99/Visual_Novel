@@ -1,0 +1,91 @@
+{
+  "dialogs":
+  [
+    {
+      "id": 1,
+      "name": "Aneko",
+      "dialog": "Bon, autant en profiter, je vais aller me renseigner sur les lieux.",
+      "characterPath": "Musicien",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id" : 2,
+      "name" : "",
+      "dialog" : "//Elle s'extirpe du théâtre et se dirige dans le couloir. Elle aperçoit au loin le chef de cuisine rentrant dans une salle. Elle décide de le suivre.//",
+      "characterPath" : "",
+      "backgroundPath": "BGCouloir1",
+      "savePoint": false
+    },
+    {
+      "id" : 3,
+      "name" : "Aneko",
+      "dialog" : "Bonjour monsieur, excusez moi de vous déranger mais je me suis perdu avec la pagaille. ",
+      "characterPath" : "Musicien",
+      "backgroundPath": "BgCuisine",
+      "savePoint": false
+    },
+    {
+      "id" : 4,
+      "name" : "Chef de la cuisine",
+      "dialog" : "Bonjour petit, vous êtes un musicien c'est ça ? Vous êtes trompé de chemin, ici c'est la cuisine.",
+      "characterPath" : "Cuisinier",
+      "backgroundPath": "BgCuisine",
+      "savePoint": false
+    },
+    {
+      "id" : 5,
+      "name" : "Aneko",
+      "dialog" : "Oh mais vous êtes le chef de cuisine. Ca à l'air délicieux ce que vous préparez, je peux goûter ?",
+      "characterPath" : "Musicien",
+      "backgroundPath": "BgCuisine",
+      "savePoint": false
+    },
+    {
+      "id" : 6,
+      "name" : "Chef de la cuisine",
+      "dialog" : "Surement pas, ces plats sont réservés pour l'empereur ",
+      "characterPath" : "Cuisinier",
+      "backgroundPath": "BgCuisine",
+      "savePoint": false
+    },
+    {
+      "id" : 7,
+      "name" : "",
+      "dialog" : "//Elle profite pour mettre du poison discrètement dans les plats sachant qu'ils sont réservés pour l'empereur.//",
+      "characterPath" : "",
+      "backgroundPath": "BgCuisine",
+      "savePoint": false
+    },
+    {
+      "id" : 8,
+      "name" : "Aneko",
+      "dialog" : "Oh excusez moi ! Au faite, où se trouve l'empereur ? Le metteur en scène m'a envoyé présenter ses excuses à ce dernier pour cet incident.",
+      "characterPath" : "Musicien",
+      "backgroundPath": "BgCuisine",
+      "savePoint": false
+    },
+    {
+      "id" : 9,
+      "name" : "Chef de la cuisine",
+      "dialog" : "Hmmm je vois... L'empereur doit être dans sa loge à l'étage royale.",
+      "characterPath" : "Cuisinier",
+      "backgroundPath": "BgCuisine",
+      "savePoint": false
+    },
+    {
+      "id" : 10,
+      "name" : "Aneko",
+      "dialog" : "*pense* Il a longuement hésité. Il n'a pas l'air très claire. Mais je n'ai pas d'autres alternatives. Qu'est-ce que je fais ?",
+      "characterPath" : "Musicien",
+      "backgroundPath": "BgCuisine",
+      "savePoint": true,
+      "choice1" : "Croire et faire confiance",
+      "choice2" : "Se méfier des informations"
+    }
+  ],
+"finalFile" : false,
+"nextChara" : -1,
+"nextFile1" : "aneko3",
+"nextFile2" : "aneko4"
+}

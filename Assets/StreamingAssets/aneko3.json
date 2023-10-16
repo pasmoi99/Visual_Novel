@@ -1,0 +1,65 @@
+{
+    "dialogs":
+    [
+      {
+        "id": 1,
+        "name": "Aneko",
+        "dialog": "Cela m'embête mais tanpis je n'ai pas vraiment d'autres choix. Je vais lui faire confiance.",
+        "characterPath": "Musicien",
+        "backgroundPath": "BgCuisine",
+        "savePoint": false
+      },
+      {
+        "id" : 2,
+        "name" : "",
+        "dialog" : "Aneko emprunte le chemin indiqué par le chef de cuisine. Mais elle se fait encercler par les gardes.",
+        "characterPath" : "",
+        "backgroundPath": "BgCouloir2",
+        "savePoint": false
+      },
+      {
+        "id" : 3,
+        "name" : "Un garde",
+        "dialog" : "Halte !!",
+        "characterPath" : "Garde02",
+        "backgroundPath": "BgCouloir2",
+        "savePoint": false
+      },
+      {
+        "id" : 4,
+        "name" : "Un garde",
+        "dialog" : "Au nom de l'empereur, je vous arrête !",
+        "characterPath" : "Garde02",
+        "backgroundPath": "BgCouloir2",
+        "savePoint": false
+      },
+      {
+        "id" : 5,
+        "name" : "Aneko",
+        "dialog" : "Quoi ? Mais je n'ai rien fait de mal !",
+        "characterPath" : "Musicien",
+        "backgroundPath": "BgCouloir2",
+        "savePoint": false
+      },
+      {
+        "id" : 6,
+        "name" : "Un garde",
+        "dialog" : "Silence mécréant ! Que l'on vous conduise au cachot !",
+        "characterPath" : "Garde02",
+        "backgroundPath": "BgCouloir2",
+        "savePoint": false
+      },
+      {
+        "id" : 7,
+        "name" : "",
+        "dialog" : " Aneko a en réalité été piégé par le chef de cuisine. Il a prévenu les gardes qu'une personne louche voulait voir l'empereur. Vous finissez en prison. Vous avez perdu !",
+        "characterPath" : "",
+        "backgroundPath": "",
+        "savePoint": false
+      }
+    ],
+    "finalFile" : true,
+    "nextChara" : -1,
+    "nextFile1" : "",
+    "nextFile2" : ""
+  }

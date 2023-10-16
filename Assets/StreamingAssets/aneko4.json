@@ -1,0 +1,35 @@
+{
+  "dialogs":
+  [
+    {
+      "id" : 1,
+      "name" : "Aneko",
+      "dialog" : "*pense* Hmmmm, il va falloir que je tente une autre stratégie. Je devrais prendre du galon pour avoir plus d'informations.",
+      "characterPath" : "Musicien",
+      "backgroundPath": "BgCuisine",
+      "savePoint": false
+    },
+    {
+      "id" : 2,
+      "name" : "",
+      "dialog" : "Elle décide d'aller dans le couloir et croise un seigneur. Aneko décide donc de le tuer pour prendre son apparence.",
+      "characterPath" : "",
+      "backgroundPath": "BGCouloir1",
+      "savePoint": false
+    },
+    {
+      "id" : 3,
+      "name" : "Aneko",
+      "dialog" : "Je vais maintenant pouvoir profiter de mon nouveau statut. Bon, je commence par où ?",
+      "characterPath" : "Empereur_Neutre",
+      "backgroundPath": "BGCouloir1",
+      "savePoint": true,
+      "choice1" : "Retourner à la cuisine",
+      "choice2" : "Aller dans la loge du seingeur"
+    }
+  ],
+  "finalFile" : false,
+  "nextChara" : -1,
+  "nextFile1" : "aneko5",
+  "nextFile2" : "aneko6"
+}

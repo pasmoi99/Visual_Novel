@@ -1,40 +1,53 @@
 {
-  "dialogs": [
+  "dialogs":
+  [
     {
       "id": 1,
-      "name": "A",
-      "dialog": "aneko.1",
-      "characterPath": "Acteur",
-      "backgroundPath": "Futon_Room",
-      "savePoint": false,
-      "chapterId" : 1
+      "name": "",
+      "dialog": "La scène se coupe brusquement pour cause inconnue",
+      "characterPath": "Musicien",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
     },
     {
-      "id": 2,
-      "name": "Yumi",
-      "dialog": "aneko.2",
-      "characterPath": "Tatsuo",
-      "backgroundPath": "Apartment_Exterior",
-      "savePoint": false,
-      "chapterId" : 1
+      "id" : 2,
+      "name" : "Aneko",
+      "dialog" : "??????",
+      "characterPath" : "Musicien",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
     },
     {
-      "id": 3,
-      "name": "Yumi",
-      "dialog": "chaneko.3",
-      "characterPath": "Acteur",
-      "backgroundPath": "Apartment_Exterior",
-      "savePoint": false,
-      "chapterId" : 1
+      "id" : 3,
+      "name" : "Aneko",
+      "dialog" : "Qu'est-ce qu'il se passe ? Il faut forcément que ça dérape !",
+      "characterPath" : "Musicien",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id" : 4,
+      "name" : "Aneko",
+      "dialog" : "Je suis sûr que c'est un coup des 2 autres truands qui veulent voler ma prime. Ils sont vraiment incompétents.",
+      "characterPath" : "Musicien",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id" : 5,
+      "name" : "Aneko",
+      "dialog" : "Qu'est-ce que je devrais faire ?",
+      "characterPath" : "Musicien",
+      "backgroundPath": "BGTemple",
+      "savePoint": true,
+      "choice1" : "aller se renseigner sur les lieux",
+      "choice2" : "profiter de la pagaille pour changer d'apparence"
+
     }
   ],
-
+  "finalFile" : false,
+  "nextChara" : -1,
+  "nextFile1" : "aneko2",
+  "nextFile2" : "aneko3"
   
-  "finalFile": true,
-  "nextChara": -1
-
-
-
-
-
 }

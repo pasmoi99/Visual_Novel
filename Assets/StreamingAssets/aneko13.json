@@ -1,0 +1,33 @@
+{
+    "dialogs":
+    [
+      {
+        "id": 1,
+        "name": "Aneko",
+        "dialog": "Je m'en excuse mais je suis dans l'incapacité physique de goûter. Il se trouve que je suis allergique au Namanare.",
+        "characterPath": "Cuisinier",
+        "backgroundPath": "BgLoge-Piece",
+        "savePoint": false
+      },
+      {
+        "id" : 2,
+        "name" : "Le garde",
+        "dialog" : "Très bien *S'adressant à d'autres gardes* Qu'on fasse venir un subordonné pour qu'il goûte le repas.",
+        "characterPath" : "Garde02",
+        "backgroundPath": "BgLoge-Piece",
+        "savePoint": false
+      },
+      {
+        "id" : 3,
+        "name" : "",
+        "dialog" : "Le subordonné meurt une fois le plat goûté. Le drame fait stopper la représentation et évacuer le théâtre. L'empereur est placé sous haute sécurité. La mission tombe à l'eau. Vous avez perdu !",
+        "characterPath" : "",
+        "backgroundPath": "",
+        "savePoint": false
+      }
+    ],
+    "finalFile" : true,
+    "nextChara" : -1,
+    "nextFile1" : "",
+    "nextFile2" : ""
+  }

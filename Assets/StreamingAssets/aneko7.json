@@ -1,0 +1,43 @@
+{
+    "dialogs":
+    [
+      {
+        "id": 1,
+        "name": "Aneko",
+        "dialog": "Hmmm, je vais en profiter pour directement changer d'apparence.",
+        "characterPath": "Musicien",
+        "backgroundPath": "BGTemple",
+        "savePoint": false
+      },
+      {
+        "id" : 2,
+        "name" : "",
+        "dialog" : "Elle bouscule et empoisonne un garde à côté d'elle grâce à une petite lame dissimulée dans sa manche.",
+        "characterPath" : "",
+        "backgroundPath": "BGTemple",
+        "savePoint": false
+      },
+      {
+        "id" : 3,
+        "name" : "",
+        "dialog" : "Aneko profite sous sa nouvelle couverture de garde pour se déplacer hors du théâtre. Elle rencontre un serveur qui l'interpelle.",
+        "characterPath" : "",
+        "backgroundPath": "BgCouloir2",
+        "savePoint": false
+      },
+      {
+        "id" : 4,
+        "name" : "Aneko",
+        "dialog" : "Raah un serveur, il va me faire perdre mon temps. D'un autre côté, je pourrais peut être me servir de lui.",
+        "characterPath" : "Garde01",
+        "backgroundPath": "BgCouloir2",
+        "savePoint": true,
+        "choice1" : "L'assassiner",
+        "choice2" : "Lui parler"
+      }
+    ],
+    "finalFile" : false,
+    "nextChara" : -1,
+    "nextFile1" : "aneko8",
+    "nextFile2" : "aneko9"
+  }
