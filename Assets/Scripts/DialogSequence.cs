@@ -15,6 +15,5 @@ public class DialogSequence
     public string textChoice1;
     public string textChoice2;
     public bool savePoint;
-    public int chapterId;
 
 }
