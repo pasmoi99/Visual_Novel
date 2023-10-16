@@ -14,6 +14,9 @@ public class DialogSequence
     public Sprite spriteBackground; //bg
     public string textChoice1;
     public string textChoice2;
+    public string textChoiceChara1;
+    public string textChoiceChara2;
+    public string textChoiceChara3;
     public bool savePoint;
 
 }

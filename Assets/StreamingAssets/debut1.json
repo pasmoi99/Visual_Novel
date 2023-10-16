@@ -52,5 +52,6 @@
   ],
   "finalFile" : false,
   "nextChara" : 1,
-  "nextFile1" : "aneko1"
+  "nextFile1" : "Aneko1",
+  "isStart": true
 }

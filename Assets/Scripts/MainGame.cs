@@ -13,10 +13,17 @@ public class MainGame : MonoBehaviour
     // public static MainGame instance;
 
 
+    //GO.gameObject.interactable = false;
+
     public Button buttonNext;
 
     public Button choice1; //bouton choix 1
     public Button choice2; //bouton choix 2
+
+    public Button choiceChara1;
+    public Button choiceChara2;
+    public Button choiceChara3;
+
     public int choice; // pour id texte
 
     public TMP_Text goToSavePoint;
@@ -46,12 +53,9 @@ public class MainGame : MonoBehaviour
     private int sequenceNumber = 0;
     private SavePoint savePoint;
 
-    private string previousChapter;
-    private int chapterProgress = 1;
-    private int fileCount = 1;
 
     private bool isFinalFile;
-    private string[] perso = { "Tatsuo1", "Aneko1" };
+    private string[] perso = { "debut1", "aneko1" , "Tatsuo1", "Kumo1"};
     private string nextFileName;
     private int currentChara = 0;
     //private int multiplier=1;
@@ -60,12 +64,16 @@ public class MainGame : MonoBehaviour
     private void Awake()
     {
 
+
         savePoint = new SavePoint();
 
         buttonGoToBeginning.onClick.AddListener(OnClickGoToBeginning);
         buttonGoToSavePoint.onClick.AddListener(OnClickGoToSavePoint);
         choice1.gameObject.SetActive(false);
         choice2.gameObject.SetActive(false);
+        choiceChara1.gameObject.SetActive(false);
+        choiceChara2.gameObject.SetActive(false);
+        choiceChara3.gameObject.SetActive(false);
         goToSavePointBox.gameObject.SetActive(false);
         goToSavePoint.gameObject.SetActive(false);
         buttonGoToBeginning.gameObject.SetActive(false);
@@ -106,7 +114,9 @@ public class MainGame : MonoBehaviour
 
         choice1.onClick.AddListener(() => { Choice(1); });
         choice2.onClick.AddListener(() => { Choice(2); });
-
+        choiceChara1.onClick.AddListener(() => { Choice(3); });
+        choiceChara2.onClick.AddListener(() => { Choice(4); });
+        choiceChara3.onClick.AddListener(() => { Choice(5); });
     }
 
 
@@ -123,7 +133,21 @@ public class MainGame : MonoBehaviour
             nextFileName = jDialogs.nextFile2;
 
         }
+        
+        if (value==3)
+        {
+            nextFileName = jDialogs.nextFileChara1;
+        }
 
+        if (value == 4)
+        {
+            nextFileName = jDialogs.nextFileChara2;
+        }
+
+        if (value == 5)
+        {
+            nextFileName = jDialogs.nextFileChara3;
+        }
 
         SelectNextFile(nextFileName);
         SetChoiceButtons(false);
@@ -236,15 +260,26 @@ public class MainGame : MonoBehaviour
             buttonNext.gameObject.SetActive(false);
 
             SetChoiceButtons(true);//test
-            fileCount++;
 
             if (isFinalFile == true)
             {
                 SetChoiceButtons(false);
                 SetSaveChoice(true);
+                setCharaButtons(true);
+                //fileCount = savePoint.chapterId;
+            }
+
+
+            if (jDialogs.isStart == true)
+            {
+                SetChoiceButtons(false);
+                SetSaveChoice(false);
+
                 //fileCount = savePoint.chapterId;
 
+
             }
+
             if (jDialogs.nextChara == -1 && sequenceNumber == dialogsList.Count)
             {
                 SetSaveChoice(false);
@@ -278,6 +313,19 @@ public class MainGame : MonoBehaviour
 
     }
 
+    public void setCharaButtons(bool active)
+    {
+        choiceChara1.gameObject.SetActive(active);
+        choiceChara2.gameObject.SetActive(active);
+        choiceChara3.gameObject.SetActive(active);
+        buttonNext.gameObject.SetActive(!active);
+        textBox.gameObject.SetActive(!active);
+        textDialog.gameObject.SetActive(!active);
+        textCharacterName.gameObject.SetActive(!active);
+        spriteCharacter.gameObject.SetActive(!active);
+        spriteBackground.gameObject.SetActive(!active);
+        nameBox.gameObject.SetActive(!active);
+    }
 
     public void SetSaveChoice(bool active)
     {
@@ -302,6 +350,12 @@ public class MainGame : MonoBehaviour
     {
         choice1.gameObject.SetActive(active);
         choice2.gameObject.SetActive(active);
+        if (dialogsList[sequenceNumber]!=null)
+        {
+            choiceChara1.gameObject.SetActive(true);
+            choiceChara2.gameObject.SetActive(true);
+            choiceChara3.gameObject.SetActive(true);
+        }
     }
 
     public void CheckAndSetSavePoint(DialogSequence dialSeq, Dialogs dials)
@@ -333,7 +387,10 @@ public class MainGame : MonoBehaviour
                 backgroundPath = dials.dialogs[i].backgroundPath,
                 textChoice1 = dials.dialogs[i].choice1,
                 textChoice2 = dials.dialogs[i].choice2,
-                savePoint = dials.dialogs[i].savePoint,
+                textChoiceChara1 = dials.dialogs[i].choiceChara1,
+                textChoiceChara2 = dials.dialogs[i].choiceChara2,
+                textChoiceChara3 = dials.dialogs[i].choiceChara3,
+                savePoint = dials.dialogs[i].savePoint
             });
 
         }
@@ -401,6 +458,9 @@ public class Dialog
     public string backgroundPath;
     public string choice1;
     public string choice2;
+    public string choiceChara1;
+    public string choiceChara2;
+    public string choiceChara3;
     public bool savePoint;
 }
 
