@@ -13,7 +13,7 @@
       "id" : 2,
       "name" : "Aneko",
       "dialog" : "??????",
-      "characterPath" : "Musicien",
+      "characterPath" : "Aneko",
       "backgroundPath": "BGTemple",
       "savePoint": false
     },
@@ -47,7 +47,6 @@
     }
   ],
   "finalFile" : false,
-  "nextChara" : -1,
   "nextFile1" : "aneko2",
   "nextFile2" : "aneko3",
   "chapterId": "aneko1"

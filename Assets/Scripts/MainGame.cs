@@ -55,7 +55,7 @@ public class MainGame : MonoBehaviour
 
 
     private bool isFinalFile;
-    private string[] perso = { "debut1", "aneko1" , "Tatsuo1", "Kumo1"};
+    private string[] perso = { "debut1", "aneko1", "Tatsuo1", "Kumo1" };
     private string nextFileName;
     private int currentChara = 0;
     //private int multiplier=1;
@@ -63,7 +63,6 @@ public class MainGame : MonoBehaviour
     //cache les bouttons de choix du moment on l'on reprends
     private void Awake()
     {
-
 
         savePoint = new SavePoint();
 
@@ -78,7 +77,6 @@ public class MainGame : MonoBehaviour
         goToSavePoint.gameObject.SetActive(false);
         buttonGoToBeginning.gameObject.SetActive(false);
         buttonGoToSavePoint.gameObject.SetActive(false);
-
 
 
         jSavePath = Application.streamingAssetsPath + "/SavePoint.json"; //chemin fichier JSON des sauvegardes
@@ -111,12 +109,11 @@ public class MainGame : MonoBehaviour
         //_sequenceNumber = savePoint.dialogId;//test
         //chapterCount = savePoint.chapterId; //test 
 
-
         choice1.onClick.AddListener(() => { Choice(1); });
         choice2.onClick.AddListener(() => { Choice(2); });
-        choiceChara1.onClick.AddListener(() => { Choice(3); });
-        choiceChara2.onClick.AddListener(() => { Choice(4); });
-        choiceChara3.onClick.AddListener(() => { Choice(5); });
+        //choiceChara1.onClick.AddListener(() => { Choice(3); });
+        //choiceChara2.onClick.AddListener(() => { Choice(4); });
+        //choiceChara3.onClick.AddListener(() => { Choice(5); });
     }
 
 
@@ -133,21 +130,24 @@ public class MainGame : MonoBehaviour
             nextFileName = jDialogs.nextFile2;
 
         }
-        
-        if (value==3)
-        {
-            nextFileName = jDialogs.nextFileChara1;
-        }
 
-        if (value == 4)
-        {
-            nextFileName = jDialogs.nextFileChara2;
-        }
+        //if (value == 3)
+        //{
+        //    nextFileName = jDialogs.nextFileChara1;
+        //    SelectNextFile(perso[1]);
+        //}
 
-        if (value == 5)
-        {
-            nextFileName = jDialogs.nextFileChara3;
-        }
+        //if (value == 4)
+        //{
+        //    nextFileName = jDialogs.nextFileChara2;
+        //    SelectNextFile(perso[2]);
+        //}
+
+        //if (value == 5)
+        //{
+        //    nextFileName = jDialogs.nextFileChara3;
+        //    SelectNextFile(perso[3]);
+        //}
 
         SelectNextFile(nextFileName);
         SetChoiceButtons(false);
@@ -194,9 +194,9 @@ public class MainGame : MonoBehaviour
         //chapterCount = savePoint.chapterId;
         sequenceNumber = savePoint.dialogId;
         SelectNextFile(savePoint.chapterId);
-        savePoint.chapterId = "Tatsuo1";
+        savePoint.chapterId = "";
         savePoint.dialogId = 0;
-        UpdateDialogSequence(dialogsList[sequenceNumber -1]);
+        UpdateDialogSequence(dialogsList[sequenceNumber - 1]);
         SetSaveChoice(false);
 
     }
@@ -207,7 +207,7 @@ public class MainGame : MonoBehaviour
         //chapterCount = 0;
         sequenceNumber = 0;
         SelectNextFile(perso[0]);
-        savePoint.chapterId = "Tatsuo1";
+        savePoint.chapterId = "";
         savePoint.dialogId = 0;
         UpdateDialogSequence(dialogsList[0]);
         SetSaveChoice(false);
@@ -227,20 +227,20 @@ public class MainGame : MonoBehaviour
         {
             spriteCharacter.sprite = characterSprite;
         }
-        else
-        {
-            Debug.LogError("Impossible de charger l'image du chara");
-        }
+        //else
+        //{
+        //    Debug.LogError("Impossible de charger l'image du chara");
+        //}
 
         Sprite backgroundSprite = Resources.Load<Sprite>(sequence.backgroundPath);
         if (backgroundSprite != null)
         {
             spriteBackground.sprite = backgroundSprite;
         }
-        else
-        {
-            Debug.LogError("Impossible de charger l'image du background");
-        }
+        //else
+        //{
+        //    Debug.LogError("Impossible de charger l'image du background");
+        //}
 
 
     }
@@ -254,7 +254,7 @@ public class MainGame : MonoBehaviour
             CheckAndSetSavePoint(dialogsList[sequenceNumber], jDialogs);
             sequenceNumber++;
         }
-        
+
         if (sequenceNumber == dialogsList.Count)
         {
             buttonNext.gameObject.SetActive(false);
@@ -265,28 +265,39 @@ public class MainGame : MonoBehaviour
             {
                 SetChoiceButtons(false);
                 SetSaveChoice(true);
-                setCharaButtons(true);
+               //setCharaButtons(false);
                 //fileCount = savePoint.chapterId;
             }
 
-
-            if (jDialogs.isStart == true)
+            if (isFinalFile == true && jDialogs.nextChara != -1)
             {
+                currentChara = jDialogs.nextChara;
                 SetChoiceButtons(false);
                 SetSaveChoice(false);
-
-                //fileCount = savePoint.chapterId;
-
-
+                sequenceNumber = 0;
+                SelectNextFile(perso[currentChara]);
+               // SelectNextFile(nextFileName);
+                UpdateDialogSequence(dialogsList[0]);
             }
+            //if (jDialogs.isStart == true)
+            //{
+            //    SetChoiceButtons(false);
+            //    SetSaveChoice(false);
+            //   // setCharaButtons(true);
 
-            if (jDialogs.nextChara == -1 && sequenceNumber == dialogsList.Count)
+            ////    //fileCount = savePoint.chapterId;
+
+
+            //}
+
+            if (jDialogs.nextChara == 3 && sequenceNumber == dialogsList.Count && isFinalFile ==true)
             {
                 SetSaveChoice(false);
+               // setCharaButtons(false);
                 SceneManager.LoadScene("MainMenu");
             }
 
-            //else if (currentChara != jDialogs.nextChara && jDialogs.nextChara!=-1)
+            //else if (jDialogs.nextChara != -1 && )
             //{
             //    currentChara = jDialogs.nextChara;
             //    SetSaveChoice(false);
@@ -313,19 +324,19 @@ public class MainGame : MonoBehaviour
 
     }
 
-    public void setCharaButtons(bool active)
-    {
-        choiceChara1.gameObject.SetActive(active);
-        choiceChara2.gameObject.SetActive(active);
-        choiceChara3.gameObject.SetActive(active);
-        buttonNext.gameObject.SetActive(!active);
-        textBox.gameObject.SetActive(!active);
-        textDialog.gameObject.SetActive(!active);
-        textCharacterName.gameObject.SetActive(!active);
-        spriteCharacter.gameObject.SetActive(!active);
-        spriteBackground.gameObject.SetActive(!active);
-        nameBox.gameObject.SetActive(!active);
-    }
+    //public void setCharaButtons(bool active)
+    //{
+    //   choiceChara1.gameObject.SetActive(active);
+    //   choiceChara2.gameObject.SetActive(active);
+    //   choiceChara3.gameObject.SetActive(active);
+    //   buttonNext.gameObject.SetActive(!active);
+    //   textBox.gameObject.SetActive(!active);
+    //   textDialog.gameObject.SetActive(!active);
+    //   textCharacterName.gameObject.SetActive(!active);
+    //  spriteCharacter.gameObject.SetActive(!active);
+    //   spriteBackground.gameObject.SetActive(!active);
+    //   nameBox.gameObject.SetActive(!active);
+    //}
 
     public void SetSaveChoice(bool active)
     {
@@ -350,12 +361,12 @@ public class MainGame : MonoBehaviour
     {
         choice1.gameObject.SetActive(active);
         choice2.gameObject.SetActive(active);
-        if (dialogsList[sequenceNumber]!=null)
-        {
-            choiceChara1.gameObject.SetActive(true);
-            choiceChara2.gameObject.SetActive(true);
-            choiceChara3.gameObject.SetActive(true);
-        }
+        //if (dialogsList[sequenceNumber]!=null)
+        //{
+        //    choiceChara1.gameObject.SetActive(true);
+        //    choiceChara2.gameObject.SetActive(true);
+        //    choiceChara3.gameObject.SetActive(true);
+        //}
     }
 
     public void CheckAndSetSavePoint(DialogSequence dialSeq, Dialogs dials)
@@ -365,7 +376,7 @@ public class MainGame : MonoBehaviour
             savePoint.dialogId = dialSeq.id;
             savePoint.chapterId = dials.chapterId;
             File.WriteAllText(jSavePath, JsonUtility.ToJson(savePoint));//test
-  
+
 
 
         }
@@ -387,9 +398,9 @@ public class MainGame : MonoBehaviour
                 backgroundPath = dials.dialogs[i].backgroundPath,
                 textChoice1 = dials.dialogs[i].choice1,
                 textChoice2 = dials.dialogs[i].choice2,
-                textChoiceChara1 = dials.dialogs[i].choiceChara1,
-                textChoiceChara2 = dials.dialogs[i].choiceChara2,
-                textChoiceChara3 = dials.dialogs[i].choiceChara3,
+                //textChoiceChara1 = dials.dialogs[i].choiceChara1,
+                //textChoiceChara2 = dials.dialogs[i].choiceChara2,
+                //textChoiceChara3 = dials.dialogs[i].choiceChara3,
                 savePoint = dials.dialogs[i].savePoint
             });
 
@@ -405,6 +416,19 @@ public class MainGame : MonoBehaviour
             isFinalFile = (bool)dials.finalFile;
             //print(finalFile);
         }
+
+        //if (!dials.isStart)
+        //{
+        //    //print(d);
+        //    //print(d);
+        //    jDialogs.isStart = false;
+        //}
+        //else
+        //{
+
+        //    jDialogs.isStart = (bool)dials.isStart;
+        //    //print(isStart);
+        //}
 
 
     }
@@ -422,11 +446,11 @@ public class MainGame : MonoBehaviour
             spriteCharacter.gameObject.SetActive(true);
             spriteCharacter.sprite = characterSprite;
         }
-        else
-        {
-            spriteCharacter.gameObject.SetActive(false);
-            Debug.LogError("Impossible de charger l'image du chara");
-        }
+        //else
+        //{
+        //    spriteCharacter.gameObject.SetActive(false);
+        //    Debug.LogError("Impossible de charger l'image du chara");
+        //}
 
 
         Sprite backgroundSprite = Resources.Load<Sprite>(backgroundPath);
@@ -434,10 +458,10 @@ public class MainGame : MonoBehaviour
         {
             spriteBackground.sprite = backgroundSprite;
         }
-        else
-        {
-            Debug.LogError("Impossible de charger l'image du background");
-        }
+        //else
+        //{
+        //    Debug.LogError("Impossible de charger l'image du background");
+        //}
 
 
     }
@@ -458,9 +482,9 @@ public class Dialog
     public string backgroundPath;
     public string choice1;
     public string choice2;
-    public string choiceChara1;
-    public string choiceChara2;
-    public string choiceChara3;
+    //public string choiceChara1;
+    //public string choiceChara2;
+    //public string choiceChara3;
     public bool savePoint;
 }
 
