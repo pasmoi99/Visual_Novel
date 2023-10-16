@@ -80,6 +80,7 @@
       "characterPath": "",
       "backgroundPath": "BGTemple",
       "savePoint": false
+      
     },
     {
       "id": 11,
@@ -88,6 +89,7 @@
       "characterPath": "",
       "backgroundPath": "BGTemple",
       "savePoint": false
+      
     },
     {
       "id": 12,
@@ -96,6 +98,7 @@
       "characterPath": "CDO_Colere",
       "backgroundPath": "BGTemple",
       "savePoint": false
+      
     },
     {
       "id": 13,
@@ -103,10 +106,15 @@
       "dialog": "Ah, vous voilà enfin ! Mais où étiez vous passé ? Cela fait un moment que l'on vous cherche ! A cause de vous on a dû mettre en pause la scène !",
       "characterPath": "MES",
       "backgroundPath": "BGTemple",
-      "savePoint": false
+      "savePoint": false,
+      "choice1":  "aller dans  la cuisine",
+      "choice2": "aller dans le couloir"
+      
     }
   ],
-  "finalFile" : false
-
+  "finalFile" : false,
+  "nextChara": -1,
+  "nextFile1" : "TextTestTasuo2",
+  "nextFile2" : "TextTestTasuo3"
 
 }
