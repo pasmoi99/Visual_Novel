@@ -1,0 +1,36 @@
+{
+  "dialogs": [
+    {
+      "id": 1,
+      "name": "",
+      "dialog": "Prend le couloir a gauche.",
+      "characterPath": "",
+      "backgroundPath": "BgCouloir2",
+      "savePoint": true
+    },
+    {
+      "id": 2,
+      "name": "",
+      "dialog": "Sur le chemins, Il croise le seigneur dans le couloir sur son chemin.",
+      "characterPath": "",
+      "backgroundPath": "BgCouloir2",
+      "savePoint": false
+    },
+    {
+      "id": 3,
+      "name": "",
+      "dialog": "Sur le chemins, Il croise le seigneur dans le couloir sur son chemin.",
+      "characterPath": "Seigneur_Neutre",
+      "backgroundPath": "BgCouloir2",
+      "savePoint": false
+    }
+
+
+
+  ],
+  "finalFiles" : true,
+"nextChara" : 1,
+"nextFile1" : "",
+"nextFile2" : ""
+
+}

@@ -1,0 +1,56 @@
+{
+  "dialogs":
+  [
+    {
+      "id": 1,
+      "name": "",
+      "dialog": "Se renseigner auprès metteur en scène.",
+      "characterPath": "",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 2,
+      "name": "Kumo",
+      "dialog": "*prend une voix grave et sérieuse*, Il a t-il un problème avec le personnel ?",
+      "characterPath": "Kumo",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 3,
+      "name": "Metteur en scène",
+      "dialog": "D'un air intimidé N...non, on ne m'a pas rapporter le problème sur la situation.",
+      "characterPath": "MES",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 5,
+      "name": "Kumo",
+      "dialog": "/Décide donc de se diriger vers un garde tout près/",
+      "characterPath": "",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 2,
+      "name": "Kumo",
+      "dialog": "Mmmhh... es ce que je lui demande des informations sur l'Empereur directement ou sur la pagaille pour paraitre plus discret ?",
+      "characterPath": "Kumo",
+      "backgroundPath": "BGTemple",
+      "savePoint": false,
+      "choice1":"Je devrais inventé une excuse pour pour ne pas paraitre suspect au yeux du garde…",
+      "choice2":"l'interroger sur des renseignements sur l'emplacement de l'empereur."
+    }
+    
+  ],
+  "finalFiles" : false,
+  "nextChara" : 1,
+  "nextFile1" : "2",
+  "nextFile2" : "Kumo4"
+
+
+  
+
+}

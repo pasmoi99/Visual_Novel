@@ -1,0 +1,142 @@
+{
+  "dialogs": [
+    {
+      "id": 1,
+      "name": "",
+      "dialog": "Accepter et va chercher l'acteur dans le couloir ",
+      "characterPath": "",
+      "backgroundPath": "BGTemple",
+      "savePoint": true
+    },
+    {
+      "id": 2,
+      "name": "",
+      "dialog": "En allant dans le couloir il repère le chef cuisinier rentrer dans la cuisine ",
+      "characterPath": "",
+      "backgroundPath": "BGCouloir1",
+      "savePoint": false
+    },
+    {
+      "id": 3,
+      "name": "Kumo",
+      "dialog": "Pense je devrais surement le suivre…",
+      "characterPath": "Kumo",
+      "backgroundPath": "BGCouloir1",
+      "savePoint": false
+    },
+    {
+      "id": 4,
+      "name": "",
+      "dialog": "Il se dirige donc vers la cuisine",
+      "characterPath": "",
+      "backgroundPath": "BGCouloir1",
+      "savePoint": false
+    },
+    {
+      "id": 5,
+      "name": "Kumo",
+      "dialog": "Je sens que mon dieu me dis qu'il va me servir *inspire*",
+      "characterPath": "Kumo",
+      "backgroundPath": "BgCuisine",
+      "savePoint": false
+    },
+    {
+      "id": 6,
+      "name": "",
+      "dialog": "En le voyant faire des plats pour le seigneur, il le tue par derrière et vole son visage",
+      "characterPath": "",
+      "backgroundPath": "BgCuisine",
+      "savePoint": false
+    },
+    {
+      "id": 7,
+      "name": "",
+      "dialog": "Peut de temps après, quelqu'un entre dans la cuisine",
+      "characterPath": "",
+      "backgroundPath": "BgCuisine",
+      "savePoint": false
+    },
+    {
+      "id": 8,
+      "name": "musicien",
+      "dialog": "Bonjour monsieur, excusez moi de vous déranger mais je me suis perdu avec la pagaille. ",
+      "characterPath": "Musicien",
+      "backgroundPath": "BgCuisine",
+      "savePoint": false
+    },
+    {
+      "id": 9,
+      "name": "Kumo",
+      "dialog": "Bonjour petit, vous êtes un musicien c'est ça ? Vous vous êtes trompé de chemin, ici c'est la cuisine.",
+      "characterPath": "Cuisinier",
+      "backgroundPath": "BgCuisine",
+      "savePoint": false
+    },
+    {
+      "id": 10,
+      "name": "musicien",
+      "dialog": "Oh mais vous êtes le chef de cuisine. Ca à l'air délicieux ce que vous préparez, je peux goûter ?",
+      "characterPath": "Musicien",
+      "backgroundPath": "BgCuisine",
+      "savePoint": false
+    },
+    {
+      "id": 11,
+      "name": "Kumo",
+      "dialog": "Surement pas, ces plats sont réservés pour l'empereur ",
+      "characterPath": "Cuisinier",
+      "backgroundPath": "BgCuisine",
+      "savePoint": false
+    },
+    {
+      "id": 12,
+      "name": "musicien",
+      "dialog": "Oh excusez moi !! Au faite, où se trouve l'empereur ? Le metteur en scène m'a envoyé présenter ses excuses à l'empereur pour cet incident.",
+      "characterPath": "Musicien",
+      "backgroundPath": "BgCuisine",
+      "savePoint": false
+    },
+    {
+      "id": 13,
+      "name": "Kumo",
+      "dialog": "Hmmm je vois...",
+      "characterPath": "Cuisinier",
+      "backgroundPath": "BgCuisine",
+      "savePoint": false
+    },
+    {
+      "id": 14,
+      "name": "Kumo",
+      "dialog": "*rélféchis*, je sais je vais attirer l'attention sur elle. Cela me laissera plus de temps et de champ libre pour agir.",
+      "characterPath": "Cuisinier",
+      "backgroundPath": "BgCuisine",
+      "savePoint": false
+    },
+    {
+      "id": 13,
+      "name": "Kumo",
+      "dialog": "l'empereur doit être dans sa loge à l'étage royale.",
+      "characterPath": "Cuisinier",
+      "backgroundPath": "BgCuisine",
+      "savePoint": false  
+    },
+    {
+      "id": 13,
+      "name": "",
+      "dialog": "Il part...",
+      "characterPath": "",
+      "backgroundPath": "BgCuisine",
+      "savePoint": false,
+      "choice1":"prend le couloir à droite.",
+      "choice2":"prend le couloir à gauche"
+    }
+
+  ],
+  "finalFiles" : false,
+  "nextChara" : 1,
+  "nextFile1" : "2bis",
+  "nextFile2" : "2bisbis"
+
+  
+
+}

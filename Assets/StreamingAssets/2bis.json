@@ -1,0 +1,62 @@
+{
+  "dialogs": [
+    {
+      "id": 1,
+      "name": "",
+      "dialog": "Prendre le couloir a droite.",
+      "characterPath": "MaleSpritebySutemo",
+      "backgroundPath": "BgCouloir2",
+      "savePoint": true
+    },
+    {
+      "id": 2,
+      "name": "",
+      "dialog": "Se rapproche d'un garde",
+      "characterPath": "",
+      "backgroundPath": "BgCouloir2",
+      "savePoint": false
+    },
+    {
+      "id": 3,
+      "name": "Kumo",
+      "dialog": "excusez moi, es ce que vous savez ou je peux trouver l'Empereur ?",
+      "characterPath": "Kumo",
+      "backgroundPath": "BgCouloir2",
+      "savePoint": false
+    },
+    {
+      "id": 4,
+      "name": "Garde",
+      "dialog": "Oui bien sur...hésitant  vous êtes sur le bon chemin, continuez tout droit.",
+      "characterPath": "Garde02",
+      "backgroundPath": "BgCouloir2",
+      "savePoint": false
+    },
+    {
+      "id": 5,
+      "name": "Kumo",
+      "dialog": "Merci beaucoup !",
+      "characterPath": "Kumo",
+      "backgroundPath": "BgCouloir2",
+      "savePoint": false
+    },
+    {
+      "id": 6,
+      "name": "",
+      "dialog": "Sur le chemins, Il croise le seigneur dans le couloir sur son chemin puis se fais assassiné par lui.",
+      "characterPath": "",
+      "backgroundPath": "BgCouloir2",
+      "savePoint": false,
+      "choice1":"",
+      "choice2":""
+    }
+    
+  ],
+  "finalFiles" : true,
+  "nextChara" : 1,
+  "nextFile1" : "",
+  "nextFile2" : ""
+
+  
+
+}

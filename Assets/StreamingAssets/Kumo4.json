@@ -1,0 +1,28 @@
+{
+  "dialogs":
+  [
+    {
+      "id": 1,
+      "name": "Kumo",
+      "dialog": " Pouvez vous me dire l'emplacement de l'Empereur pour que je puisse transmettre l'information ?",
+      "characterPath": "Kumo",
+      "backgroundPath": "BGTemple",
+      "savePoint": true
+    },
+    {
+      "id": 2,
+      "name": "Garde",
+      "dialog": "Je suis désolé mais seulement personne haut gradé peuvent rencontrer l'Empereur.",
+      "characterPath": "Garde01",
+      "backgroundPath": "BGTemple",
+      "savePoint": false,
+      "choice1":"Aller voir le directement seigneur.",
+      "choice2":"Demander s'il y a une autre solution."
+    }
+   
+  ],
+  "finalFiles" : false,
+  "nextChara" : 1,
+  "nextFile1" : "Kumo6",
+  "nextFile2" : "Kumo5"
+}

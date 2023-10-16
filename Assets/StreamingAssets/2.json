@@ -1,0 +1,40 @@
+{
+  "dialogs": [
+    {
+      "id": 1,
+      "name": "Kumo",
+      "dialog": "Je devrais inventé une excuse pour pour ne pas paraitre suspect au yeux du garde…",
+      "characterPath": "Kumo",
+      "backgroundPath": "BGTemple",
+      "savePoint": true
+    },
+    {
+      "id": 2,
+      "name": "Kumo",
+      "dialog": "*se rapproche* Avez vous eu des informations sur la situation ? Parce que… le seigneur s'impatiente. ",
+      "characterPath": "Kumo",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 1,
+      "name": "Garde",
+      "dialog": "Oui, on m'a rapporté qu'il manquait un acteur. D'après les autres il est introuvable, on doit vite le retrouver avant que le seigneur s'irrite.",
+      "characterPath": "Garde01",
+      "backgroundPath": "BGTemple",
+      "savePoint": false,
+      "choice1":"Accepter et va chercher l'acteur dans le couloir ",
+      "choice2":"Refuser de l'aider"
+    }
+
+
+
+  ],
+  "finalFiles" : false,
+  "nextChara" : 1,
+  "nextFile1" : "-2",
+  "nextFile2" : "2-"
+
+  
+
+}

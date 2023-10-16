@@ -1,0 +1,60 @@
+{
+  "dialogs":
+  [
+    {
+      "id": 1,
+      "name": "",
+      "dialog": "S'énerve.",
+      "characterPath": "",
+      "backgroundPath": "BGTemple",
+      "savePoint": true
+    },
+    {
+      "id": 2,
+      "name": "Tatsuo",
+      "dialog": "Mais pour qui tu te prend ! Qu'est-ce que vous avez tous à me saouler !",
+      "characterPath": "CDO_Colere",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 3,
+      "name": "Tatsuo",
+      "dialog": "Retourne a ta place mécréant et ne me dérange plus !!",
+      "characterPath": "CDO_Colere",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 4,
+      "name": "Musicien",
+      "dialog": "*Marmonne* Hmmm c'est bizarre. Cela ne lui ressemble pas de s'énerver comme ça. Lui qui est si calme d'habitude. Je vais aller en parler au metteur en scène.",
+      "characterPath": "Musicien",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 5,
+      "name": "",
+      "dialog": "Le metteur en scène alertés, il se méfie du chef d'orchestre qui lui paraissait déjà louche. Il décide d'alerter les gardes notamment de l'endroit où il a trouvé le chef d'orchestre. Les gardes inspectent l'endroit et finissent par découvrir la scène de crime.",
+      "characterPath": "",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 6,
+      "name": "",
+      "dialog": "Vous êtes donc arrêté par les gardes et finissez exécutés pour meurtre. Vous avez perdu.",
+      "characterPath": "",
+      "backgroundPath": "",
+      "savePoint": false
+    }
+    
+    
+  ],
+  "finalFiles" : true,
+"nextChara" : 1,
+"nextFile1" : "",
+"nextFile2" : ""
+
+}

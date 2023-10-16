@@ -1,0 +1,29 @@
+{
+  "dialogs":
+  [
+    {
+      "id": 1,
+      "name": "Kumo",
+      "dialog": "/Décide donc de se diriger vers un garde tout près/",
+      "characterPath": "",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 2,
+      "name": "Kumo",
+      "dialog": "Mmmhh... es ce que je lui demande des informations sur l'Empereur directement ou sur la pagaille pour paraitre plus discret ?",
+      "characterPath": "Kumo",
+      "backgroundPath": "BGTemple",
+      "savePoint": false,
+      "choice1":"Je devrais inventé une excuse pour pour ne pas paraitre suspect au yeux du garde…",
+      "choice2":"l'interroger sur des renseignements sur l'emplacement de l'empereur."
+    }
+    
+  ],
+  "finalFiles" : false,
+  "nextChara" : 1,
+  "nextFile1" : "2",
+  "nextFile2" : "Kumo4"
+
+}

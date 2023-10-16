@@ -1,0 +1,68 @@
+{
+  "dialogs":
+  [
+    {
+      "id": 1,
+      "name": "",
+      "dialog": "Demander s'il y a une autre solution.",
+      "characterPath": "",
+      "backgroundPath": "BGTemple",
+      "savePoint": true
+    },
+    {
+      "id": 2,
+      "name": "Kumo",
+      "dialog": "Il y a t-il une personne ici qui pourrais lui transmettre le message ?",
+      "characterPath": "Kumo",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 3,
+      "name": "Garde",
+      "dialog": "Bien évidement, vous pouvez aller voir le seigneur pour lui en parler. Celui ci se trouve dans sa loge pour manger.",
+      "characterPath": "Garde01",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 4,
+      "name": "Kumo",
+      "dialog": "Très bien, merci j'y vais au plus vite !",
+      "characterPath": "Kumo",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 5,
+      "name": "",
+      "dialog": "/Arrive dans la loge/",
+      "characterPath": "",
+      "backgroundPath": "BgLoge-Piece",
+      "savePoint": false
+    },
+    {
+      "id": 6,
+      "name": "Seigneur",
+      "dialog": "Ah tiens, vous la, gouté a ma nourriture avant moi c'est un ordre.",
+      "characterPath": "Seigneur_Neutre",
+      "backgroundPath": "BgLoge-Piece",
+      "savePoint": false
+    },
+    {
+      "id": 7,
+      "name": "",
+      "dialog": "Arrive au même moment où la nourriture empoisonné est devant le seigneur. Il se fait sélectionné pour tester la nourriture et meurt.",
+      "characterPath": "",
+      "backgroundPath": "",
+      "savePoint": false,
+      "choice1":"",
+      "choice2":""
+    }
+   
+  ],
+  "finalFiles" : true,
+  "nextChara" : 1,
+  "nextFile1" : "",
+  "nextFile2" : ""
+}

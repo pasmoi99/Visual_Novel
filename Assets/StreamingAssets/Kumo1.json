@@ -1,0 +1,43 @@
+{
+  "dialogs":
+  [
+    {
+      "id": 1,
+      "name": "Kumo",
+      "dialog": "Mmmhhh...",
+      "characterPath": "Kumo",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id" : 2,
+      "name" : "Kumo",
+      "dialog" : "Tout le monde semble assez agité. Quelque chose de louche se trame au niveau de la scène.",
+      "characterPath" : "Kumo",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 3,
+      "name": "Kumo",
+      "dialog": "Je pense qu'il est de mon devoir d'aller enquêter sur le problème et récupérer des infirmations sur la cible.",
+      "characterPath" : "Kumo",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 4,
+      "name": "Kumo",
+      "dialog": "Dans un premier temps, je devrais me renseigner sur toute cette agitation ",
+      "characterPath": "Kumo",
+      "backgroundPath": "BGTemple",
+      "savePoint": true,
+      "choice1":"Se renseigner auprès metteur en scène.",
+      "choice2":"/Décide donc de se diriger vers un garde tout près/"
+    }
+  ],
+  "finalFiles" : false,
+  "nextChara" : 1,
+  "nextFile1" : "Kumo3",
+  "nextFile2" : "Kumo2"
+}

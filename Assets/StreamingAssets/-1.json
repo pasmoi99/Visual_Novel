@@ -1,0 +1,62 @@
+{
+  "dialogs":
+  [
+    {
+      "id": 1,
+      "name": "",
+      "dialog": "S'excuser et se remettre en place",
+      "characterPath": "CDO_Excuse",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 2,
+      "name": "Tatsuo",
+      "dialog": "*Marmonne* Tu ne perds rien pour attendre !! Je te tuerai un jour. Mais pour l'instant, il faut que joue mon rôle. J'ai déjà failli me faire attraper.",
+      "characterPath": "CDO_Colere",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 3,
+      "name": "Tatsuo",
+      "dialog": "Il faut que j'essaye de bien jouer pour ne pas me faire remarquer.'",
+      "characterPath": "CDO_Excuse",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 4,
+      "name": "",
+      "dialog": "Essaye de jouer son role.",
+      "characterPath": "",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 5,
+      "name": "Musicien",
+      "dialog": "Quelque temps après, un musicien arrive vers lui.",
+      "characterPath": "",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 5,
+      "name": "Musicien",
+      "dialog": "Monsieur, vous allez bien ? Sauf votre respect, vous faites beaucoup d'erreur.",
+      "characterPath": "Musicien",
+      "backgroundPath": "BGTemple",
+      "savePoint": false,
+      "choice1":"S'énerver",
+      "choice2":"S'excuser"
+    }
+    
+    
+  ],
+  "finalFiles" : false,
+  "nextChara" : 1,
+  "nextFile1" : "-1bis",
+  "nextFile2" : "-1bis-"
+
+}

@@ -1,0 +1,28 @@
+{
+  "dialogs":
+  [
+    {
+      "id": 1,
+      "name": "",
+      "dialog": "Ignorer le bruit et continuer son chemin.",
+      "characterPath": "",
+      "backgroundPath": "BGCouloir1",
+      "savePoint": false
+    },
+    {
+      "id": 2,
+      "name": "",
+      "dialog": "Tatsuo continue son chemin mais finit par se perdre. Il arrive sans le savoir dans un endroit interidt aux gardes de son rang. Il finit emprisonné pour intrusion sur un territoire interdit d'accès. Vous avez perdu.",
+      "characterPath": "Garde01",
+      "backgroundPath": "BGCouloir1",
+      "savePoint": false
+    }
+    
+    
+  ],
+  "finalFiles" : true,
+  "nextChara" : 1,
+  "nextFile1" : "",
+  "nextFile2" : ""
+
+}

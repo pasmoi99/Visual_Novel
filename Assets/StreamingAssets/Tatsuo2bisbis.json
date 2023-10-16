@@ -1,0 +1,91 @@
+{
+  "dialogs": [
+    {
+      "id": 1,
+      "name": "",
+      "dialog": "Il arrive devant une porte orné d'or et de motifs.",
+      "characterPath": "",
+      "backgroundPath": "BgCouloir2",
+      "savePoint": true
+    },
+    {
+      "id": 2,
+      "name": "Tatsuo",
+      "dialog": "*pense* Oh mais je suis sous une bonne étoile, cela ressemble à la loge d'un seigneur!!",
+      "characterPath": "Garde01",
+      "backgroundPath": "BgCouloir2",
+      "savePoint": false
+    },
+    {
+      "id": 3,
+      "name": "Tatsuo",
+      "dialog": "*Pense* Avec un peu de chances, je vais pouvoir le tuer et prendre sa place, allons-y !!",
+      "characterPath": "Garde01",
+      "backgroundPath": "BgCouloir2",
+      "savePoint": false
+    },
+    {
+      "id": 4,
+      "name": "",
+      "dialog": "/Au même moment, un autre garde surgit du couloir/",
+      "characterPath": "Garde02",
+      "backgroundPath": "BgCouloir2",
+      "savePoint": false
+    },
+    {
+      "id": 5,
+      "name": "Garde",
+      "dialog": "Halte !!",
+      "characterPath": "Garde02",
+      "backgroundPath": "BgCouloir2",
+      "savePoint": false
+    },
+    {
+      "id": 6,
+      "name": "Garde",
+      "dialog": "Cet endroit vous est interdit, veuillez rebrousser chemin et vous présentez immédiatement.",
+      "characterPath": "Garde02",
+      "backgroundPath": "BgCouloir2",
+      "savePoint": false
+    },
+    {
+      "id": 7,
+      "name": "Tatsuo",
+      "dialog": "Pourquoi c'est toujours quand je me rapproche de mon but que je suis interrompu. Il va comprendre que je suis un imposteur. Je pourrais bien le tuer mais il a l'air plutôt résistant. Pas le choix, je dois m'enfuir.",
+      "characterPath": "Garde01",
+      "backgroundPath": "BgCouloir2",
+      "savePoint": false
+    },
+    {
+      "id": 8,
+      "name": "",
+      "dialog": "*s'enfuis*",
+      "characterPath": "",
+      "backgroundPath": "BgCouloir2",
+      "savePoint": false
+    },
+    {
+      "id": 9,
+      "name": "Garde",
+      "dialog": "Revenez soldat, c'est un ordre !!",
+      "characterPath": "Garde02",
+      "backgroundPath": "BgCouloir2",
+      "savePoint": false
+    },
+    {
+      "id": 10,
+      "name": "",
+      "dialog": "Tatsuo se fait finalement rattrapé par le garde. Il est capturé et envoyé en prison. Vous avez perdu.",
+      "characterPath": "",
+      "backgroundPath": "",
+      "savePoint": false
+    }
+
+
+  ],
+  "finalFiles" : true,
+  "nextChara" : 1,
+  "nextFile1" : "",
+  "nextFile2" : ""
+
+}

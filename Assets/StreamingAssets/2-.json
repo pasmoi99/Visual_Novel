@@ -1,0 +1,46 @@
+{
+  "dialogs": [
+    {
+      "id": 1,
+      "name": "",
+      "dialog": "Refuser de l'aider",
+      "characterPath": "",
+      "backgroundPath": "BGTemple",
+      "savePoint": true
+    },
+    {
+      "id": 2,
+      "name": "Kumo",
+      "dialog": "*Je suis dans l'obligation de refuser cet missions, je dois faire passer cette information a l'Empereur et au seigneur au plus vite.",
+      "characterPath": "Kumo",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 3,
+      "name": "Kumo",
+      "dialog": "Pouvez vous me dire l'emplacement de l'Empereur pour que je puisse transmettre l'information ?",
+      "characterPath": "Kumo",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 4,
+      "name": "Garde",
+      "dialog": "Je suis désolé mais seulement personne haut gradé peuvent rencontrer l'Empereur",
+      "characterPath": "Garde01",
+      "backgroundPath": "BGTemple",
+      "savePoint": false,
+      "choice1":"Aller voir le directement seigneur.",
+      "choice2":"Demander s'il y a une autre solution."
+    }
+
+
+
+  ],
+  "finalFiles" : false,
+  "nextChara" : 1,
+  "nextFile1" : "Kumo6",
+  "nextFile2" : "Kumo5"
+
+}

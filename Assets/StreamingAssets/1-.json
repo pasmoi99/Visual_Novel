@@ -1,0 +1,109 @@
+{
+  "dialogs": [
+    {
+      "id": 1,
+      "name": "",
+      "dialog": "L'ignorer",
+      "characterPath": "",
+      "backgroundPath": "BGTemple",
+      "savePoint": true
+    },
+    {
+      "id": 2,
+      "name": "Metteur en scène",
+      "dialog": "Vous me tournez le dos en plus, c'est une honte !! Je vais appeler les garde, ils vous mettront en prison pour avoir osé faire attendre l'empereur !!",
+      "characterPath": "MES",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 3,
+      "name": "Tatsuo",
+      "dialog": "Oh c'est ce qu'on va voir. Tu ne vas avertir personne. Tu ne parleras plus jamais d'ailleurs.",
+      "characterPath": "CDO_Colere",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 4,
+      "name": "",
+      "dialog": "Tatsuo commence a s'approcherde lui, et l'étrangle pour prendre son visage.",
+      "characterPath": "",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 5,
+      "name": "Tatsuo",
+      "dialog": "Bon maintenant, il faut que je bouge d'ici.",
+      "characterPath": "MES",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 6,
+      "name": "",
+      "dialog": "Aperçoit un seigneur",
+      "characterPath": "",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 7,
+      "name": "Tatsuo",
+      "dialog": "Oh je vais en profiter pour lui soutirer des informations.",
+      "characterPath": "MES",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 8,
+      "name": "Tatsuo",
+      "dialog": "Excusez-moi mon seigneur,Je suis désolé de vous accaparez, j'aimerais savoir si vous savez où est l'empereur. J'aimerais lui demander son avis sur la représentation.",
+      "characterPath": "MES",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 9,
+      "name": "Seigneur",
+      "dialog": "Je n'ai pas de temps à vous accorder. Adressez vous à quelqu'un d'autres !",
+      "characterPath": "Seigneur_Dubitatif",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 10,
+      "name": "Tatsuo",
+      "dialog": "*Pense* Nan mais pour qui il se prend celui-là ! Je vais le tuer, on ne me parle pas comme ça !",
+      "characterPath": "MES",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 11,
+      "name": "",
+      "dialog": "Bruit sourd venant du couloir",
+      "characterPath": "",
+      "backgroundPath": "BgCouloir2",
+      "savePoint": false
+    },
+    {
+      "id": 12,
+      "name": "Tatsuo",
+      "dialog": "C'étais quoi ça ?",
+      "characterPath": "MES",
+      "backgroundPath": "BgCouloir2",
+      "savePoint": false,
+      "choice1":"aller voir d'où venait le bruit",
+      "choice2":"ignorer le bruit et continuer son chemin"
+    }
+
+
+  ],
+  "finalFiles" : false,
+  "nextChara" : 1,
+  "nextFile1" : "Tatsuo2bisbis",
+  "nextFile2" : "Tatsuo2bis"
+
+}

@@ -1,0 +1,70 @@
+{
+  "dialogs":
+  [
+    {
+      "id": 1,
+      "name": "",
+      "dialog": "Aller voir la personne a droite.",
+      "characterPath": "",
+      "backgroundPath": "BGCouloir1",
+      "savePoint": true
+    },
+    {
+      "id": 2,
+      "name": "Tatsuo",
+      "dialog": "*pense* Oh, je crois que c'est mon jour de chance. Il a l'air d'être un seigneur. Je vais en profiter pour lui soutirer des informations.",
+      "characterPath": "Garde01",
+      "backgroundPath": "BGCouloir1",
+      "savePoint": false
+    },
+    {
+      "id": 3,
+      "name": "Tatsuo",
+      "dialog": "Excusez-moi mon seigneur, je suis désolé de vous accaparez, j'aimerais savoir si vous savez où est l'empereur. Il m'a fait demandé.",
+      "characterPath": "Garde01",
+      "backgroundPath": "BGCouloir1",
+      "savePoint": false
+    },
+    {
+      "id": 4,
+      "name": "Seigneur",
+      "dialog": "Je n'ai pas de temps à vous accorder, surtout à un simple garde. Adressez vous à quelqu'un d'autres !",
+      "characterPath": "Seigneur_Dubitatif",
+      "backgroundPath": "BGCouloir1",
+      "savePoint": false
+    },
+    {
+      "id": 5,
+      "name": "Tatsuo",
+      "dialog": "*Pense* Nan mais pour qui il se prend celui-là ! Je vais le tuer, on ne me parle pas comme ça !",
+      "characterPath": "Garde01",
+      "backgroundPath": "BGCouloir1",
+      "savePoint": false
+    },
+    {
+      "id": 6,
+      "name": "",
+      "dialog": "*Bruit sourd venant du couloir*",
+      "characterPath": "",
+      "backgroundPath": "BGCouloir1",
+      "savePoint": false
+    },
+    {
+      "id": 7,
+      "name": "Tatsuo",
+      "dialog": "C'était quoi ça ?",
+      "characterPath": "Garde01",
+      "backgroundPath": "BGCouloir1",
+      "savePoint": false,
+      "choice1":"aller voir d'où venait le bruit.",
+      "choice2":"ignorer le bruit et continuer son chemin."
+    }
+    
+    
+  ],
+  "finalFiles" : false,
+  "nextChara" : 1,
+  "nextFile1" : "Tatsuo2bisbis",
+  "nextFile2" : "Tatsuo2bis"
+
+}

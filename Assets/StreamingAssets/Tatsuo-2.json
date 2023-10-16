@@ -1,0 +1,85 @@
+{
+  "dialogs": [
+    {
+      "id": 1,
+      "name": "",
+      "dialog": "Aller voir la personne à gauche",
+      "characterPath": "",
+      "backgroundPath": "BGCouloir1",
+      "savePoint": true
+    },
+    {
+      "id": 2,
+      "name": "Tatsuo",
+      "dialog": "*Pense* C'est le chef de cuisine ! Qu'est-ce qu'il fait là ?",
+      "characterPath": "Garde01",
+      "backgroundPath": "BGCouloir1",
+      "savePoint": false
+    },
+    {
+      "id": 3,
+      "name": "Chef de cuisine",
+      "dialog": "Oh bonjour monsieur le garde. Excusez moi, est-ce que vous savez ou je peux trouver l'Empereur ?",
+      "characterPath": "Cuisinier",
+      "backgroundPath": "BGCouloir1",
+      "savePoint": false
+    },
+    {
+      "id": 4,
+      "name": "Tatsuo",
+      "dialog": "*Pense* Pourquoi il a fallu qu'il me demande ça à moi ? Crois moi mon bonhomme, si je le savais je ne saurais pas là dans ce couloir...",
+      "characterPath": "Garde01",
+      "backgroundPath": "BGCouloir1",
+      "savePoint": false
+    },
+    {
+      "id": 5,
+      "name": "Tatsuo",
+      "dialog": "Je vais simplement lui indiquer un chemin et continuer mon chemin. J'ai déjà trop perdu mon temps.",
+      "characterPath": "Garde01",
+      "backgroundPath": "BGCouloir1",
+      "savePoint": false
+    },
+    {
+      "id": 6,
+      "name": "Chef de cuisine",
+      "dialog": "Merci beaucoup.",
+      "characterPath": "Cuisinier",
+      "backgroundPath": "BGCouloir1",
+      "savePoint": false
+    },
+    {
+      "id": 7,
+      "name": "Tatsuo",
+      "dialog": "Bon maintenant, continuons notre chemin.",
+      "characterPath": "Garde01",
+      "backgroundPath": "BGCouloir1",
+      "savePoint": false
+    },
+    {
+      "id": 8,
+      "name": "",
+      "dialog": "*Bruit sourd venant du couloir*",
+      "characterPath": "",
+      "backgroundPath": "BGCouloir1",
+      "savePoint": false
+    },
+    {
+      "id": 8,
+      "name": "Tatsuo",
+      "dialog": "C'était quoi ça ?",
+      "characterPath": "Garde01",
+      "backgroundPath": "BGCouloir1",
+      "savePoint": false,
+      "choice1":"aller voir d'où venait le bruit",
+      "choice2":"ignorer le bruit et continuer son chemin"
+    }
+    
+
+  ],
+  "finalFiles" : false,
+  "nextChara" : 1,
+  "nextFile1" : "Tatsuobisbis",
+  "nextFile2" : "Tatsuo2bis"
+
+}

@@ -1,0 +1,62 @@
+{
+  "dialogs":
+  [
+    {
+      "id": 1,
+      "name": "",
+      "dialog": "S'excuser",
+      "characterPath": "",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 2,
+      "name": "Tatsuo",
+      "dialog": "Oui excuse moi. Je ne suis pas dedans. Je suis fatigué aujourd'hui...",
+      "characterPath": "CDO_Excuse",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 3,
+      "name": "Musicien",
+      "dialog": "Oh ce n'est rien monsieur. Je m'interrogeais seulement. Ne forcez pas trop.",
+      "characterPath": "Musicien",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 4,
+      "name": "Tatsuo",
+      "dialog": "Bon sang, il faut que je fasse plus attention. Ma couverture ne va pas duré à ce rythme là. Je sais je vais prendre le rôle d'un garde et quitter la scène. Cela m'éloignera de tous ces parasites.",
+      "characterPath": "CDO_Excuse",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 5,
+      "name": "",
+      "dialog": "Tatsuo décide de partir discrètement.",
+      "characterPath": "",
+      "backgroundPath": "BGTemple",
+      "savePoint": false
+    },
+    {
+      "id": 6,
+      "name": "",
+      "dialog": "Par la suite, il s'en prend a un garde pour changer d'apparence en prenant son visage.",
+      "characterPath": "",
+      "backgroundPath": "BGTemple",
+      "savePoint": false,
+      "choice1":"Aller voir la personne à gauche",
+      "choice2":"Aller voir la personne à droite"
+    }
+    
+    
+  ],
+  "finalFiles" : false,
+  "nextChara" : 1,
+  "nextFile1" : "Tatsuo-2",
+  "nextFile2" : "Tatsuo2-"
+
+}
